@@ -1,0 +1,232 @@
+@import "../../../css-config/mixins.scss";
+.monitorArmCategory{
+    border: 1px solid rgba(0,0,0,0.12);
+    overflow: hidden;
+    div{
+        h1{
+            padding-top: 10px; 
+            font-size: 16px;
+            position: relative;
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -3px;
+             left: 5px;
+             width: 46%;
+             height: 3px;
+             background-color: #077bc4;
+           }
+           @include sm{
+            padding-top: 10px; 
+            font-size: 20px;
+            position: relative;
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -3px;
+             left: 5px;
+             width: 43%;
+             height: 3px;
+             background-color: #077bc4;
+           }
+           }
+           @include md{
+            padding: 15px 10px 0 15px; 
+            font-size: 26px;
+            position: relative;
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -3px;
+             left: 10px;
+             width: 28%;
+             height: 3px;
+             background-color: #077bc4;
+           }
+           }
+           @include lg{
+            padding: 15px 10px 0 15px; 
+            font-size: 26px;
+            position: relative;
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -3px;
+             left: 15px;
+             width: 20%;
+             height: 3px;
+             background-color: #077bc4;
+           }
+           }
+           @include xl{
+            padding: 20px 10px 0 15px; 
+            font-size: 30px;
+            position: relative;
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -3px;
+             left: 15px;
+             width: 18%;
+             height: 3px;
+             background-color: #077bc4;
+           }
+           }
+           @include xxl{
+            padding: 25px 10px 0 25px; 
+            font-size: 32px;
+            position: relative;
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -3px;
+             left: 15px;
+             width: 16%;
+             height: 3px;
+             background-color: #077bc4;
+           }
+           }
+        }
+    }
+    .monitorProductCard{
+        margin: 0px 2px;
+       @include md{
+        margin: 0 25px 15px 25px;
+       }
+       @include lg{
+        margin: 0 10px 15px 10px;
+       }
+       @include xl{
+        margin: 0 15px 15px 15px;
+       }
+       @include xxl{
+        margin: 0 25px 15px 25px;
+       }
+        
+    }
+    .monitorProductCardClicked{
+        transform: translateX(100%);
+        animation: productSlide 1s ease-in forwards;
+    }
+    .subCategories{
+        width: 98%;
+        // height: 100px;
+        display: flex;
+        // flex-wrap: nowrap;
+        align-items: center;
+        gap: 6px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font: 600;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-bottom: 3px solid rgba(0,0,0,0.2);
+        // overflow-x: auto;
+
+        span{
+            cursor: pointer;
+            &:hover{
+                color: #077bc4;
+            }
+        }
+        @include sm{
+            width: 98%;
+            // max-width: 200%;
+            // height: 100px;
+            display: flex;
+            // flex-wrap: nowrap;
+            // flex-flow: row;
+            align-items: center;
+            gap: 20px;
+            text-transform: capitalize;
+            font-size: 18px;
+            font: 600;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgba(0,0,0,0.2);
+            // overflow-x: auto;
+    
+            span{
+                padding: 2px 5px;
+                display: inline-block;
+                cursor: pointer;
+                &:hover{
+                    color: #077bc4;
+                }
+            }
+        }
+        @include md{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-transform: capitalize;
+            font-size: 22px;
+            font-weight: 500;
+            margin-left: 40px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgba(0,0,0,0.2);
+            span{
+                cursor: pointer;
+                &:hover{
+                    color: #077bc4;
+                }
+            }
+        }
+        @include lg{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            text-transform: capitalize;
+            font-size: 22px;
+            font: 700px;
+            margin-left: 140px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid rgba(0,0,0,0.2);
+            span{
+                cursor: pointer;
+                &:hover{
+                    color: #077bc4;
+                }
+            }
+        }
+        @include xl{
+            display: flex;
+            align-items: center;
+            gap: 55px;
+            text-transform: capitalize;
+            font-size: 23px;
+            font: 700px;
+            margin-left: 240px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid rgba(0,0,0,0.2);
+            span{
+                cursor: pointer;
+                &:hover{
+                    color: #077bc4;
+                }
+            }
+        }
+        @include xxl{
+            display: flex;
+            align-items: center;
+            gap: 75px;
+            text-transform: capitalize;
+            font-size: 25px;
+            font: 700px;
+            margin-left: 240px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid rgba(0,0,0,0.2);
+            span{
+                cursor: pointer;
+                &:hover{
+                    color: #077bc4;
+                }
+            }
+        }
+        
+    }
+}
+@keyframes productSlide {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0);}
+}
