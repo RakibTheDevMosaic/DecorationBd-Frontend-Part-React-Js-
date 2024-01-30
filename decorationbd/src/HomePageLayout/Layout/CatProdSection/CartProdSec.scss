@@ -59,37 +59,37 @@
             div{
                 h1{
                     color: white;
-                    padding: 15px 0 5px 15px; 
-                    font-size: 20px;
+                    padding: 25px 0 0 20px; 
+                    font-size: 22px;
+                    margin-bottom: 0;
                     position: relative;
                     &::after{
                      content: "";
                      position: absolute;
                      bottom: -3px;
-                     left: 10px;
-                     width: 38%;
+                     left: 20px;
+                     width: 33%;
                      height: 3px;
                      background-color: #077bc4;
                    }
                 }
-            }
-            .catsubCategories{
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 18px;
-                font-weight: 600;
-                margin-top: 0px;
-                margin-left: 20px;
-                margin-bottom: 15px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    padding: 2px 5px;
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                .catsubCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                    margin-left: 20px;
+                    margin-bottom: 25px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
                     }
                 }
             }
@@ -109,36 +109,37 @@
             div{
                 h1{
                     color: white;
-                    padding: 15px 10px 0 15px; 
-                    font-size: 26px;
+                    padding: 25px 0 0 25px; 
+                    font-size: 22px;
+                    margin-bottom: 25px;
                     position: relative;
                     &::after{
                      content: "";
                      position: absolute;
                      bottom: -3px;
-                     left: 10px;
-                     width: 22%;
+                     left: 25px;
+                     width: 28%;
                      height: 3px;
                      background-color: #077bc4;
                    }
                 }
-            }
-            .catsubCategories{
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 22px;
-                font-weight: 700;
-                margin-top: 10px;
-                margin-left: 40px;
-                margin-bottom: 15px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                .catsubCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 22px;
+                    margin-left: 0;
+                    margin-bottom: 25px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
                     }
                 }
             }
@@ -158,36 +159,37 @@
             div{
                 h1{
                     color: white;
-                    padding: 15px 10px 0 20px; 
-                    font-size: 26px;
+                    padding: 25px 0 0 25px; 
+                    font-size: 22px;
+                    margin-bottom: 25px;
                     position: relative;
                     &::after{
                      content: "";
                      position: absolute;
                      bottom: -3px;
-                     left: 18px;
-                     width: 16%;
+                     left: 25px;
+                     width: 28%;
                      height: 3px;
                      background-color: #077bc4;
                    }
                 }
-            }
-            .catsubCategories{
-                display: flex;
-                align-items: center;
-                gap: 25px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 22px;
-                font: 700px;
-                margin-top: 10px;
-                margin-left: 140px;
-                margin-bottom: 20px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                .catsubCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 22px;
+                    margin-left: 0;
+                    margin-bottom: 25px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
                     }
                 }
             }
@@ -207,36 +209,37 @@
             div{
                 h1{
                     color: white;
-                    padding: 20px 10px 0 20px; 
-                    font-size: 28px;
+                    padding: 25px 0 0 25px; 
+                    font-size: 22px;
+                    margin-bottom: 25px;
                     position: relative;
                     &::after{
                      content: "";
                      position: absolute;
                      bottom: -3px;
-                     left: 15px;
-                     width: 15%;
+                     left: 25px;
+                     width: 28%;
                      height: 3px;
                      background-color: #077bc4;
                    }
                 }
-            }
-            .catsubCategories{
-                display: flex;
-                align-items: center;
-                gap: 45px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 22px;
-                font: 700px;
-                margin-top: 0;
-                margin-left: 140px;
-                margin-bottom: 20px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                .catsubCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 22px;
+                    margin-left: 0;
+                    margin-bottom: 25px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
                     }
                 }
             }
@@ -256,39 +259,41 @@
             div{
                 h1{
                     color: white;
-                    padding: 25px 10px 0 25px; 
-                    font-size: 32px;
+                    padding: 25px 0 0 25px; 
+                    font-size: 21px;
+                    margin-bottom: 25px;
                     position: relative;
                     &::after{
                      content: "";
                      position: absolute;
                      bottom: -3px;
-                     left: 15px;
-                     width: 14%;
+                     left: 25px;
+                     width: 28%;
                      height: 3px;
                      background-color: #077bc4;
                    }
                 }
-            }
-            .catsubCategories{
-                display: flex;
-                align-items: center;
-                gap: 45px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 25px;
-                font: 700px;
-                margin-top: 10px;
-                margin-left: 240px;
-                margin-bottom: 25px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                .catsubCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 20px;
+                    margin-left: 0;
+                    margin-bottom: 25px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
                     }
                 }
             }
+         
             .catSecProductCard{
                 margin: 0 23px 25px 23px;
             }

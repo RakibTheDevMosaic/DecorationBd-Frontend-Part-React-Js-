@@ -16,13 +16,14 @@ const FeaturedProducts = ({open,setOpen,count,decrementQuantity,incrementQuantit
   return (
     <div>
       <div
-        className={`1500px:${Styles.section} 1280px:w-[96%] 1280px:mx-auto 1024px:w-[98%] w-[100%] mt-[20px] mx-auto
-        1500px:ml-[94px] p-[8px] 1024px:p-0 monitorArmCategory`}
+        className={`1350px:w-[94%] 1350px:mx-auto 1280px:w-[95%] 1280px:mx-auto 1024px:w-[98%] w-[100%] mt-[20px] mx-auto
+         p-[8px] 1024px:p-0 monitorArmCategory`}
       >
-        <div className={`1024px:${Styles.heading} text-start`}>
-          <h1 className="font-semibold uppercase pl-[5px] 1024px:pl-0">Monitor Arms</h1>
-        </div>
-        <div className="subCategories font-semibold 300px:overflow-x-scroll whitespace-nowrap scroll scroll-smooth 768px:overflow-x-hidden">
+        <div className={` pb-[10px] flex 300px:flex-col 768px:flex-row 768px:items-center 300px:gap-[10px] 768px:gap-[30px] 1024px:gap-[50px]`}>
+          <h1 className="font-[600] uppercase pl-[5px] 1024px:pl-0">Monitor Arms</h1>
+
+         <div className="subCategories font-semibold 
+         300px:overflow-x-scroll whitespace-nowrap scroll scroll-smooth 768px:overflow-x-hidden">
           <span
             onClick={() => {
               // setIsClicked(true);
@@ -63,11 +64,13 @@ const FeaturedProducts = ({open,setOpen,count,decrementQuantity,incrementQuantit
               SetVm(false)
               setOther(true)}}  className={`${active===4?"text-[#077bc4]":""}`}>other stand</span>
         </div>
+        </div>
+
        <div className="">
         {sArm?(
            <div
            className={`grid grid-cols-2 gap-[3px] 
-           md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[10px] xl:grid-cols-5 xl:gap-[8px] 1500px:gap-[20px] monitorProductCard ${
+           md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[10px] xl:grid-cols-5 xl:gap-[8px] 1350px:grid-cols-6 1350px:gap-[5px] monitorProductCard ${
              isClicked
                ? "monitorProductCardClicked"
                : ""

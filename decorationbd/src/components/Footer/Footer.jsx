@@ -1,6 +1,6 @@
 import React from "react";
 // import Style from "../../../Styles/Styles";
-import logo from "../../Assets/img/Logo.png";
+import logo from "../../Assets/img/footerlogo.png";
 import lg from "../../Assets/img/pay.png";
 import { FaEnvelope, FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -15,10 +15,11 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div className={`footerSection`}>
+      <div className="newsletterWrapper">
       <div className="newletterPart">
         <div className="text">be in touch with us :</div>
         <div className="inputEmail">
-          <input type="text" placeholder="Enter your e-mail" />
+          <input type="text" placeholder="Enter your e-mail" className="1350px:text-[12px] 1024px:text-[13px]"/>
           <button>join us</button>
         </div>
         <div className="socialIcons">
@@ -39,68 +40,55 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      </div>
+
+       <div className="w-full bg-[#0a0a0a]">
       <div
-        className="others grid grid-cols-2 md:grid-cols-2
+        className="others grid grid-cols-1 md:grid-cols-2
       lg:grid-cols-4 xl:grid-cols-4 mx-auto "
       >
         <div className="footerImg">
           <div>
             <img src={logo} alt="" className="800px:rounded-[26px] rounded-[10px] 
-            800px:shadow-md shadow shadow-zinc-100 800px:mb-[18px] 800px:pb-[2px] mb-[5px] pb-0"/>
+             800px:mb-[18px] 800px:pb-[2px] mb-[5px] pb-0"/>
           </div>
-          <div className="text1">contact us for all information and choice your best product.</div>
-          <div className="text2">
-            Lorem ipsum, dolor sit amet 
-            eaque doloremque  nihil! Expedita.
-          </div>
+     
         </div>
         <div className="category">
-          <div className="title">categories</div>
+          <div className="title">popular categories</div>
           <div className="items">
-            <div>swings</div>
-            <div>furniture</div>
-            <div>Hardware</div>
-            <div>kitchenware</div>
-            <div>monitor stand</div>
-            <div> home & decor</div>
+            <div>Monitor Arm/Stand</div>
+            <div>Pets house</div>
+            <div>Home & Decor</div>
+            <div>New Arrival</div>
           </div>
         </div>
         <div className="links">
-          <div className="title">links</div>
+          <div className="title">Useful Links</div>
           <div className="items">
-            <div>FAQ</div>
-            <div>compare</div>
-            <div>pages</div>
-            <div>cookies</div>
-            <div>stores</div>
-            <div>wishlist</div>
+            <div>About Us</div>
+            <div>Payment Method</div>
+            <div>Delivery Policy</div>
+            <div>Return & Refund Policy</div>
+            <div>Terms & Conditions</div>
           </div>
         </div>
         <div className="contact">
-          <div className="title">contact</div>
+          <div className="title">Contact Us</div>
           <div className="item">
             <FaMobile />
             <span>+8801717381296</span>
           </div>
           <div className="item">
-            <FaLocationArrow />
-            <span>
-              Kayaloram Rd, Punnamada, Kottakulangara, Alappuzha, Kerela, 688006
-            </span>
-          </div>
-          <div className="item">
             <FaEnvelope />
-            <span>Email: DevMosaic@gmail.com</span>
+            <span>Email: mnhodarajib@gmail.com</span>
           </div>
         </div>
       </div>
-      <div className="endFooter">
-        <div className="writtenLogo">
-          <h3>decorationBd</h3>
-        </div>
-        <div className="paymentImg">
-          <img src={lg} alt="" />
-        </div>
+      </div>
+      <div className="w-full bg-[#0a0a0a] h-[10%]">
+        <div className="1350px:w-[88%] 1280px:w-[90%] 768px:w-[90%] w-[100%] bg-[#27292c] justify-center mx-auto rounded-sm
+        text-[13px] h-[50px] text-[#d4d5d5] font-[600] flex items-center">all rights reserved © 2020 - 2024 decorationbd.com ​</div>
       </div>
     </div>
   );

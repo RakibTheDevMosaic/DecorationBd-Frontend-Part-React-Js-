@@ -57,7 +57,7 @@ const ContactPage = () => {
           </p>
         </div>
         <div
-          className="locImgContainer gap-[10px] lg:gap-[10px] 1280px:gap-[15px] 1500px:gap-0 grid grid-cols-1 
+          className="locImgContainer gap-[10px] lg:gap-[10px] 1280px:gap-[15px] 1350px:gap-0 grid grid-cols-1 
         md:grid-cols-2 lg:grid-cols-4"
         >
           <div className="firstImg">
@@ -226,13 +226,13 @@ const ContactPage = () => {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.021529818787!2d-73.93399982482394!3d40.6734945713994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c7eb506aa85%3A0x892a180666ea67af!2s1357%20Prospect%20Pl%2C%20Brooklyn%2C%20NY%2011213%2C%20USA!5e0!3m2!1sen!2sbd!4v1701000159158!5m2!1sen!2sbd"
           width="100%"
-          height="500"
+          height="450"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div className="faqSection w-[100%] 1024px:w-[98%] 1280px:w-[96%] 1500px:w-11/12 mx-auto">
+      <div className="faqSection w-[100%] 1024px:w-[98%] 1280px:w-[96%] 1350px:w-[94%] mx-auto">
         <div className="fullfaq">
           <div className="headingPart">
             <h4>INFORMATION QUESTIONS</h4>

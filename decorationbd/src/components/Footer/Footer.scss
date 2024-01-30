@@ -3,367 +3,481 @@
 .footerSection{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #000000;
     color: white;
     margin-top: 0;
     @include md{
         width: 100%;
         height: 100%;
-        background-color: black;
+        background-color: #0a0a0a;
         color: white;
         margin-top: 40px;
     }
     @include lg{
         width: 100%;
-        height: 580px;
-        background-color: black;
+        height: 440px;
+        background-color: #0a0a0a;
         color: white;
         margin-top: 60px;
     }
     @include xl{
         width: 100%;
-        height: 580px;
-        background-color: black;
+        height: 420px;
+        background-color: #0a0a0a;
         color: white;
         margin-top: 80px;
     }
-    .newletterPart{
+    @include xxl{
+        width: 100%;
+        height: 418px;
+        background-color:#0a0a0a ;
+        color: white;
+        margin-top: 80px;
+    }
+    .newsletterWrapper{
         width: 100%;
         height: 12%;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-        justify-content: space-around;
-        border-bottom: 1px solid rgba(255,255,255,0.3);
         @include sm{
             width: 100%;
             height: 15%;
+        }
+
+        .newletterPart{
+            width: 100%;
+            height: 12%;
             display: flex;
             flex-direction: column;
             gap: 5px;
             align-items: center;
             justify-content: space-around;
             border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
-        @include md{
-            width: 100%;
-            height: 15%;
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            align-items: center;
-            justify-content: space-around;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
-        @include lg{
-            width: 100%;
-            height: 15%;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
-        @include xl{
-            width: 100%;
-            height: 15%;
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
-        .text{
-            width: 160px;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 14px;
-            margin-right: 10px;
-            margin-top: 5px;
             @include sm{
-                width: 180px;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 16px;
-                margin-right: 10px;
-                margin-top: 5px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+                justify-content: space-around;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
             }
             @include md{
-                width: 250px;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 21px;
-                margin-right: 26px;
-                margin-top: 5px;
+                width: 90%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                background-color: #000000;
+                flex-direction: column;
+                gap: 7px;
+                align-items: center;
+                justify-content: space-around;
+                border-bottom: 1px solid rgba(255,255,255,0.4);
             }
             @include lg{
-                width: 230px;
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 20px;
-                margin-right: 10px;
-                margin-top: 0;
+                width: 90%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                background-color: #000000;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
             }
             @include xl{
-                width: 300px;
-                text-transform: uppercase;
+                width: 90%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                background-color: #000000;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
+            }
+            @include xxl{
+                width: 88%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                background-color: #000000;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid rgba(255,255,255,0.3);
+            }
+            .text{
+                width: 160px;
+                text-transform: capitalize;
                 font-weight: 600;
-                font-size: 24px;
-                margin-right: 50px;
-                margin-top: 0;
+                font-size: 14px;
+                margin-right: 10px;
+                margin-top: 5px;
+                @include sm{
+                    width: 180px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    margin-top: 5px;
+                }
+                @include md{
+                    width: 250px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 21px;
+                    margin-right: 26px;
+                    margin-top: 5px;
+                }
+                @include lg{
+                    width: 200px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    margin-top: 0;
+                }
+                @include xl{
+                    width: 300px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 24px;
+                    margin-right: 50px;
+                    margin-top: 0;
+                }
+                @include xxl{
+                    width: 300px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin-right: 50px;
+                    margin-top: 0;
+                }
             }
-        }
-        .inputEmail{
-            margin: 0 15px 2px 0;
-            input{
-                width: 140px;
-                padding: 1px;
-                border: 1px solid rgba(0,0,0,0.6);
-                border-radius: 3px 0 0 3px;
-                outline: none;
-                color: black;
-            }
-            button{
-                padding: 1.9px 2px;
-                background-color: #077bc4;
-                border: 1px solid rgba(0,0,0,0.6);
-                border-radius: 0 3px 3px 0;
-                text-transform: uppercase;
-                font-weight: 500;
-                font-size: 15px;
-            }
-            @include sm{
+            .inputEmail{
                 margin: 0 15px 2px 0;
                 input{
                     width: 140px;
-                    padding: 2px;
+                    padding: 1px;
                     border: 1px solid rgba(0,0,0,0.6);
                     border-radius: 3px 0 0 3px;
                     outline: none;
                     color: black;
                 }
                 button{
-                    padding: 3px 3px;
+                    padding: 1.9px 2px;
                     background-color: #077bc4;
                     border: 1px solid rgba(0,0,0,0.6);
                     border-radius: 0 3px 3px 0;
                     text-transform: uppercase;
                     font-weight: 500;
                     font-size: 15px;
-                    &:hover{
-                        background-color: rgb(7, 124, 197,0.6);
-                        color: #fff;
-                        transition: 0.5s ease-in;
+                }
+                @include sm{
+                    margin: 0 15px 2px 0;
+                    input{
+                        width: 140px;
+                        padding: 2px;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 3px 0 0 3px;
+                        outline: none;
+                        color: black;
+                    }
+                    button{
+                        padding: 3px 3px;
+                        background-color: #077bc4;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 0 3px 3px 0;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 15px;
+                        &:hover{
+                            background-color: rgb(7, 124, 197,0.6);
+                            color: #fff;
+                            transition: 0.5s ease-in;
+                        }
+                    }
+                }
+                @include md{
+                    margin: 0 40px 0 0;
+                    input{
+                        width: 260px;
+                        padding: 5px 5px;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 3px 0 0 3px;
+                        outline: none;
+                        color: black;
+                    }
+                    button{
+                        padding: 5px 7px;
+                        background-color: #077bc4;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 0 3px 3px 0;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 16px;
+                        &:hover{
+                            background-color: rgb(7, 124, 197,0.6);
+                            color: #fff;
+                            transition: 0.5s ease-in;
+                        }
+                    }
+                }
+                @include lg{
+                    margin: 0 10px 0 30px;
+                    input{
+                        width: 250px;
+                        padding: 4px 3px;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 3px 0 0 3px;
+                        outline: none;
+                        color: black;
+                    }
+                    button{
+                        padding: 4px 5px;
+                        background-color: #077bc4;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 0 3px 3px 0;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 13px;
+                        &:hover{
+                            background-color: rgb(7, 124, 197,0.6);
+                            color: #fff;
+                            transition: 0.5s ease-in;
+                        }
+                    }
+                }
+                @include xl{
+                    margin: 0 50px 0 10px;
+                    input{
+                        width: 350px;
+                        padding: 5px 5px;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 3px 0 0 3px;
+                        outline: none;
+                        color: black;
+                    }
+                    button{
+                        padding: 5px 7px;
+                        background-color: #077bc4;
+                        border: 1px solid rgba(0,0,0,0.6);
+                        border-radius: 0 3px 3px 0;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 16px;
+                        &:hover{
+                            background-color: rgb(7, 124, 197,0.6);
+                            color: #fff;
+                            transition: 0.5s ease-in;
+                        }
+                    }
+                }
+                @include xxl{
+                    margin: 0 50px 0 0;
+                    input{
+                        width: 340px;
+                        padding: 4px 1px;
+                        border: 0;
+                        border-radius: 3px 0 0 3px;
+                        outline: none;
+                        color: black;
+                    }
+                    button{
+                        padding: 4px 5px;
+                        margin-bottom: 2px;
+                        background-color: #077bc4;
+                        border: 0;
+                        border-radius: 0 3px 3px 0;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 12px;
+                        &:hover{
+                            background-color: rgb(7, 124, 197,0.6);
+                            color: #fff;
+                            transition: 0.5s ease-in;
+                        }
                     }
                 }
             }
-            @include md{
-                margin: 0 40px 0 0;
-                input{
-                    width: 260px;
-                    padding: 5px 5px;
-                    border: 1px solid rgba(0,0,0,0.6);
-                    border-radius: 3px 0 0 3px;
-                    outline: none;
-                    color: black;
-                }
-                button{
-                    padding: 5px 7px;
-                    background-color: #077bc4;
-                    border: 1px solid rgba(0,0,0,0.6);
-                    border-radius: 0 3px 3px 0;
-                    text-transform: uppercase;
-                    font-weight: 400;
-                    font-size: 16px;
-                    &:hover{
-                        background-color: rgb(7, 124, 197,0.6);
-                        color: #fff;
-                        transition: 0.5s ease-in;
-                    }
-                }
-            }
-            @include lg{
-                margin: 0 10px 0 30px;
-                input{
-                    width: 300px;
-                    padding: 5px 5px;
-                    border: 1px solid rgba(0,0,0,0.6);
-                    border-radius: 3px 0 0 3px;
-                    outline: none;
-                    color: black;
-                }
-                button{
-                    padding: 5px 7px;
-                    background-color: #077bc4;
-                    border: 1px solid rgba(0,0,0,0.6);
-                    border-radius: 0 3px 3px 0;
-                    text-transform: uppercase;
-                    font-weight: 400;
-                    font-size: 16px;
-                    &:hover{
-                        background-color: rgb(7, 124, 197,0.6);
-                        color: #fff;
-                        transition: 0.5s ease-in;
-                    }
-                }
-            }
-            @include xl{
-                margin: 0 50px 0 10px;
-                input{
-                    width: 350px;
-                    padding: 5px 5px;
-                    border: 1px solid rgba(0,0,0,0.6);
-                    border-radius: 3px 0 0 3px;
-                    outline: none;
-                    color: black;
-                }
-                button{
-                    padding: 5px 7px;
-                    background-color: #077bc4;
-                    border: 1px solid rgba(0,0,0,0.6);
-                    border-radius: 0 3px 3px 0;
-                    text-transform: uppercase;
-                    font-weight: 400;
-                    font-size: 16px;
-                    &:hover{
-                        background-color: rgb(7, 124, 197,0.6);
-                        color: #fff;
-                        transition: 0.5s ease-in;
-                    }
-                }
-            }
-        }
-        .socialIcons{
-            display: flex;
-            align-items: center;
-            margin-left: 0;
-            margin-right: 20px;
-            margin-bottom: 5px;
-            gap: 5px;
-            font-size: 14px;
-            a{
-                border: 1px solid rgba(255,255,255,0.5);
-                border-radius: 50%;
-                padding: 5px 5px;
-            }
-            @include sm{
+            .socialIcons{
                 display: flex;
                 align-items: center;
                 margin-left: 0;
-                margin-right: 15px;
+                margin-right: 20px;
                 margin-bottom: 5px;
                 gap: 5px;
-                font-size: 16px;
+                font-size: 14px;
                 a{
                     border: 1px solid rgba(255,255,255,0.5);
                     border-radius: 50%;
                     padding: 5px 5px;
-                    transform: rotate(0deg);
-                    &:hover{
-                        background-color: #fff;
-                        color: black;
-                        transition: transform 0.5s ease-in;
-                        transform: rotate(-360deg);
+                }
+                @include sm{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0;
+                    margin-right: 15px;
+                    margin-bottom: 5px;
+                    gap: 5px;
+                    font-size: 16px;
+                    a{
+                        border: 1px solid rgba(255,255,255,0.5);
+                        border-radius: 50%;
+                        padding: 5px 5px;
+                        transform: rotate(0deg);
+                        &:hover{
+                            background-color: #fff;
+                            color: black;
+                            transition: transform 0.5s ease-in;
+                            transform: rotate(-360deg);
+                        }
                     }
                 }
-            }
-            @include md{
-                display: flex;
-                align-items: center;
-                margin-left: 0;
-                margin-right: 35px;
-                margin-bottom: 5px;
-                gap: 12px;
-                font-size: 21px;
-                a{
-                    border: 1px solid rgba(255,255,255,0.8);
-                    border-radius: 50%;
-                    padding: 5px 5px;
-                    transform: rotate(0deg);
-                    &:hover{
-                        background-color: #fff;
-                        color: black;
-                        transition: transform 0.5s ease-in;
-                        transform: rotate(-360deg);
+                @include md{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0;
+                    margin-right: 35px;
+                    margin-bottom: 5px;
+                    gap: 12px;
+                    font-size: 21px;
+                    a{
+                        border: 1px solid rgba(255,255,255,0.8);
+                        border-radius: 50%;
+                        padding: 5px 5px;
+                        transform: rotate(0deg);
+                        &:hover{
+                            background-color: #fff;
+                            color: black;
+                            transition: transform 0.5s ease-in;
+                            transform: rotate(-360deg);
+                        }
                     }
                 }
-            }
-            @include lg{
-                display: flex;
-                align-items: center;
-                margin-left: 43px;
-                margin-right: 0;
-                margin-bottom: 0;
-                gap: 10px;
-                font-size: 18px;
-                a{
-                    border: 1px solid rgba(255,255,255,0.5);
-                    border-radius: 50%;
-                    padding: 5px 5px;
-                    transform: rotate(0deg);
-                    &:hover{
-                        background-color: #fff;
-                        color: black;
-                        transition: transform 0.5s ease-in;
-                        transform: rotate(-360deg);
+                @include lg{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 43px;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    gap: 10px;
+                    font-size: 14px;
+                    a{
+                        border: 1px solid rgba(255,255,255,0.5);
+                        border-radius: 50%;
+                        padding: 5px 5px;
+                        transform: rotate(0deg);
+                        &:hover{
+                            background-color: #fff;
+                            color: black;
+                            transition: transform 0.5s ease-in;
+                            transform: rotate(-360deg);
+                        }
                     }
                 }
-            }
-            @include xl{
-                display: flex;
-                align-items: center;
-                margin-left: 33px;
-                margin-right: 0;
-                margin-bottom: 0;
-                gap: 18px;
-                font-size: 20px;
-                a{
-                    border: 1px solid rgba(255,255,255,0.5);
-                    border-radius: 50%;
-                    padding: 5px 5px;
-                    transform: rotate(0deg);
-                    &:hover{
-                        background-color: #fff;
-                        color: black;
-                        transition: transform 0.5s ease-in;
-                        transform: rotate(-360deg);
+                @include xl{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 33px;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    gap: 18px;
+                    font-size: 20px;
+                    a{
+                        border: 1px solid rgba(255,255,255,0.5);
+                        border-radius: 50%;
+                        padding: 5px 5px;
+                        transform: rotate(0deg);
+                        &:hover{
+                            background-color: #fff;
+                            color: black;
+                            transition: transform 0.5s ease-in;
+                            transform: rotate(-360deg);
+                        }
+                    }
+                }
+                @include xxl{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 33px;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    gap: 12px;
+                    font-size: 14px;
+                    a{
+                        border: 1px solid rgba(255,255,255,0.5);
+                        border-radius: 50%;
+                        padding: 5px 5px;
+                        transform: rotate(0deg);
+                        &:hover{
+                            background-color: #fff;
+                            color: black;
+                            transition: transform 0.5s ease-in;
+                            transform: rotate(-360deg);
+                        }
                     }
                 }
             }
         }
     }
+
     .others{
         width: 100%;
         height: 70%;
         border: 1px solid rgba(255,255,255,0.1);
+        background-color: #000000;
+        padding: 15px 0;
         overflow: hidden;
         @include md{
-            width: 100%;
+            width: 90%;
             height: 70%;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 0;
+            background-color: #000000;
+            padding: 10px 0;
+        }
+        @include lg{
+            width: 90%;
+            height: 70%;
+            border: 0;
+            background-color: #000000;
+            padding: 27px 0;
+        }
+        @include xl{
+            width: 90%;
+            height: 70%;
+            border: 0;
+            background-color: #000000;
+            padding: 10px 0;
+        }
+        @include xxl{
+            width: 88%;
+            height: 70%;
+            border: 0;
+            background-color: #000000;
+            padding: 27px 0;
         }
         .footerImg{
-            width: 65%;
-            height: 70%;
+            width: 55%;
+            height: 90%;
             margin: 0 auto;
             overflow: hidden;
-            margin-top: 25px;
+            margin-top: 0;
             @include md{
                 width: 65%;
                 height: 70%;
                 margin: 0 auto;
                 overflow: hidden;
-                margin-top: 45px;
+                margin-top: 5px;
             }
             @include lg{
-                width: 63%;
+                width: 62%;
                 height: 70%;
                 margin: 0 auto;
                 overflow: hidden;
-                margin-top: 45px;
+                margin-top: 20px;
             }
             img{
                 width: 100%;
@@ -371,86 +485,25 @@
                 object-fit: contain;
 
             }
-            .text1{
-                font-size: 12px;
-                text-transform: capitalize;
-                margin-bottom: 1px;
-                margin-top: 10px;
-                font-weight: bolder;
-                margin-left: 8px;
-                color:  rgba(255,255,255,0.8);
-                @include sm{
-                    font-size: 14px;
-                    text-transform: capitalize;
-                    margin-bottom: 1px;
-                    margin-top: 10px;
-                    font-weight: bolder;
-                    margin-left: 8px;
-                    color:  rgba(255,255,255,0.8);
-                }
-                @include md{
-                    font-size: 19px;
-                    text-transform: capitalize;
-                    margin-bottom: 5px;
-                    margin-top: 10px;
-                    font-weight: bold;
-                    margin-left: 32px;
-                    color:  rgba(255,255,255,0.8);
-                }
-                @include lg{
-                    font-size: 16px;
-                    text-transform: capitalize;
-                    margin-bottom: 4px;
-                    margin-top: 10px;
-                    font-weight: bolder;
-                    margin-left: 32px;
-                    color:  rgba(255,255,255,0.8);
-                }
-            }
-            .text2{
-                font-weight: 500;
-                font-size: 12px;
-                margin-left: 9px;
-                color:  rgba(255,255,255,0.6);
-                @include sm{
-                    font-weight: 500;
-                    font-size: 14px;
-                    margin-left: 9px;
-                    color:  rgba(255,255,255,0.6);
-                }
-                @include md{
-                    font-weight: 500;
-                    font-size: 16px;
-                    margin-left: 37px;
-                    color:  rgba(255,255,255,0.6);
-                }
-                @include lg{
-                    font-weight: 500;
-                    font-size: 14px;
-                    margin-left: 37px;
-                    color:  rgba(255,255,255,0.6);
-                }
-            }
         }
         .category{
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-top: 35px;
-            margin-right: 18px;
+            margin: 18px auto;
+            
             @include sm{
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 35px;
-                margin-right: 25px;
+                margin: 5px auto;
             }
             @include md{
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 margin-top: 50px;
-                margin-right: 60px;
+                margin-right: 50px;
             }
             @include lg{
                 display: flex;
@@ -462,24 +515,31 @@
             .title{
                 font-weight: 600;
                 font-size: 16px;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 margin-bottom: 5px;
                 @include sm{
                     font-weight: 600;
-                    font-size: 17px;
-                    text-transform: uppercase;
+                    font-size: 20px;
+                    text-transform: capitalize;
                     margin-bottom: 5px;
                 }
                 @include md{
                     font-weight: 600;
                     font-size: 22px;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     margin-bottom: 10px;
+                    
                 }
                 @include lg{
                     font-weight: 600;
-                    font-size: 19px;
-                    text-transform: uppercase;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                }
+                @include xxl{
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-transform: capitalize;
                     margin-bottom: 15px;
                 }
             }
@@ -492,6 +552,7 @@
                     color: rgba(255,255,255,0.8);
                     cursor: pointer;
                     font-size: 14px;
+                    font-weight: 600;
                     &:hover{
                         color: white;
                     }
@@ -499,12 +560,13 @@
                 @include sm{
                     text-transform: capitalize;
                     align-items: center;
-                    text-align: start;
+                    text-align: center;
                     div{
                         margin-bottom: 5px;
                         color: rgba(255,255,255,0.8);
                         cursor: pointer;
                         font-size: 16px;
+                        font-weight: 600;
                         &:hover{
                             color: white;
                         }
@@ -519,6 +581,7 @@
                         color: rgba(255,255,255,0.7);
                         cursor: pointer;
                         font-size: 19px;
+                        font-weight: 600;
                         &:hover{
                             color: white;
                         }
@@ -532,7 +595,23 @@
                         margin-bottom: 12px;
                         color: rgba(255,255,255,0.7);
                         cursor: pointer;
-                        font-size: 17px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+                @include xxl{
+                    text-transform: capitalize;
+                    align-items: center;
+                    text-align: start;
+                    div{
+                        margin-bottom: 12px;
+                        color: rgba(255,255,255,0.7);
+                        cursor: pointer;
+                        font-size: 13px;
+                        font-weight: 600;
                         &:hover{
                             color: white;
                         }
@@ -550,15 +629,15 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 20px;
-                margin-right: 25px;
+                margin: 15px auto;
             }
             @include md{
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                margin-top: 50px;
-                margin-right: 60px;
+                margin-top: 30px;
+                margin-right: 0;
+                margin-left: 30px;
             }
             @include lg{
                 display: flex;
@@ -570,29 +649,43 @@
             .title{
                 font-weight: 600;
                 font-size: 16px;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 margin-bottom: 5px;
                 margin-right: 14px;
                 @include sm{
                     font-weight: 600;
-                    font-size: 17px;
-                    text-transform: uppercase;
+                    font-size: 20px;
+                    text-transform: capitalize;
                     margin-bottom: 5px;
-                    margin-right: 14px;
+                    margin-right: 0;
                 }
                 @include md{
                     font-weight: 600;
                     font-size: 22px;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     margin-bottom: 10px;
-                    margin-right: 14px;
+                    margin-right: 64px;
                 }
                 @include lg{
                     font-weight: 600;
-                    font-size: 19px;
-                    text-transform: uppercase;
+                    font-size: 16px;
+                    text-transform: capitalize;
                     margin-bottom: 15px;
-                    margin-right: 14px;
+                    margin-right: 54px;
+                }
+                @include xl{
+                    font-weight: 600;
+                    font-size: 19px;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                    margin-right: 60px;
+                }
+                @include xxl{
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                    margin-right: 62px;
                 }
             }
             .items{
@@ -604,16 +697,18 @@
                     color: rgba(255,255,255,0.8);
                     cursor: pointer;
                     font-size: 14px;
+                    font-weight: 600;
                 }
                 @include sm{
                     text-transform: capitalize;
                     align-items: center;
-                    text-align: start;
+                    text-align: center;
                     div{
                         margin-bottom: 5px;
                         color: rgba(255,255,255,0.8);
                         cursor: pointer;
                         font-size: 16px;
+                        font-weight: 600;
                         &:hover{
                             color: white;
                         }
@@ -628,6 +723,7 @@
                         color: rgba(255,255,255,0.7);
                         cursor: pointer;
                         font-size: 19px;
+                        font-weight: 600;
                         &:hover{
                             color: white;
                         }
@@ -641,7 +737,23 @@
                         margin-bottom: 12px;
                         color: rgba(255,255,255,0.7);
                         cursor: pointer;
-                        font-size: 17px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+                @include xxl{
+                    text-transform: capitalize;
+                    align-items: center;
+                    text-align: start;
+                    div{
+                        margin-bottom: 10px;
+                        color: rgba(255,255,255,0.7);
+                        cursor: pointer;
+                        font-size: 13px;
+                        font-weight: 600;
                         &:hover{
                             color: white;
                         }
@@ -657,39 +769,48 @@
             @include sm{
                 align-items: center;
                 margin-top: 20px;
-                margin-left: 15px;
+                // margin-left: 120px;
+            //    text-align: center;
             }
             @include md{
                 align-items: center;
                 margin-top: 50px;
-                margin-left: 90px;
+                margin-left: 30px;
             }
             @include lg{
                 align-items: center;
                 margin-top: 50px;
                 margin-left: 0;
+                margin-right: 50px;
             }
             .title{
                 font-weight: 600;
                 font-size: 16px;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 margin-bottom: 5px;
                 @include sm{
                     font-weight: 600;
-                    font-size: 17px;
-                    text-transform: uppercase;
+                    font-size: 20px;
+                    text-transform: capitalize;
                     margin-bottom: 5px;
+                    text-align: center;
                 }
                 @include md{
                     font-weight: 600;
                     font-size: 22px;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     margin-bottom: 10px;
                 }
                 @include lg{
                     font-weight: 600;
-                    font-size: 19px;
-                    text-transform: uppercase;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                }
+                @include xxl{
+                    font-weight: 600;
+                    font-size: 15px;
+                    text-transform: capitalize;
                     margin-bottom: 15px;
                 }
             }
@@ -714,6 +835,7 @@
                 @include sm{
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     margin-bottom: 5px;
                     color: rgba(255,255,255,0.8);
                     &:hover{
@@ -721,18 +843,20 @@
                     }
                     svg{
                         flex-shrink: 0;
-                        font-size: 14px;
+                        font-size: 16px;
                         margin-right: 3px;
                     }
                     span{
                         display: block;
                         cursor: pointer;
-                        font-size: 14px;
+                        font-size: 16px;
                     }
                 }
                 @include md{
                     display: flex;
                     align-items: center;
+                    justify-content: start;
+                    margin-left: 80px;
                     margin-bottom: 7px;
                     color: rgba(255,255,255,0.7);
                     &:hover{
@@ -754,6 +878,8 @@
                 @include lg{
                     display: flex;
                     align-items: center;
+                    justify-content: start;
+                    margin-left: 50px;
                     margin-bottom: 10px;
                     color: rgba(255,255,255,0.7);
                     &:hover{
@@ -761,7 +887,7 @@
                     }
                     svg{
                         flex-shrink: 0;
-                        font-size: 16px;
+                        font-size: 14px;
                         margin-right: 10px;
                         // margin-top: 2px;
                     }
@@ -769,92 +895,59 @@
                         display: block;
                         // margin-bottom: 10px;
                         cursor: pointer;
-                        font-size: 16px;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
+                @include xl{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-left: 70px;
+                    margin-bottom: 10px;
+                    color: rgba(255,255,255,0.7);
+                    &:hover{
+                        color: white;
+                    }
+                    svg{
+                        flex-shrink: 0;
+                        font-size: 14px;
+                        margin-right: 10px;
+                        // margin-top: 2px;
+                    }
+                    span{
+                        display: block;
+                        // margin-bottom: 10px;
+                        cursor: pointer;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+                @include xxl{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-left: 80px;
+                    margin-bottom: 10px;
+                    color: rgba(255,255,255,0.7);
+                    &:hover{
+                        color: white;
+                    }
+                    svg{
+                        flex-shrink: 0;
+                        font-size: 13px;
+                        margin-right: 10px;
+                        // margin-top: 2px;
+                    }
+                    span{
+                        display: block;
+                        // margin-bottom: 10px;
+                        cursor: pointer;
+                        font-size: 13px;
                     }
                 }
             }
         }
     }
-    .endFooter{
-        height: 10%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        @include lg{
-            height: 10%;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .writtenLogo{
-            width: 30%;
-            text-transform: capitalize;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 25px 0 0;
-            @include sm{
-                width: 30%;
-                text-transform: capitalize;
-                font-weight: bold;
-                font-size: 20px;
-                margin: 10px 0 0 0;
-            }
-            @include md{
-                width: 30%;
-                text-transform: capitalize;
-                font-weight: bold;
-                font-size: 29px;
-                margin: 10px 0 0 55px;
-            }
-            @include lg{
-                width: 100%;
-                text-transform: capitalize;
-                font-weight: bold;
-                font-size: 26px;
-                margin: 20px 0 0 55px;
-            }
-        }
-        .paymentImg{
-            width: 70%;
-            margin-top: 10px;
-            height: 100%;
-            margin-right: 0;
-            margin-bottom: 10px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                text-align: center;
-            }
-            // @include sm{
-            //     width: 50%;
-            //     margin-top: 10px;
-            //     height: 100%;
-            //     margin-right: 15px;
-            //     img{
-            //         width: 100%;
-            //         height: 100%;
-            //         object-fit: contain;
-            //         text-align: center;
-            //     }
-            // }
-            @include lg{
-                width: 20%;
-                margin-top: 20px;
-                height: 100%;
-                margin-right: 45px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    text-align: center;
-                }
-            }
-        }
-        
-    }
+
 }

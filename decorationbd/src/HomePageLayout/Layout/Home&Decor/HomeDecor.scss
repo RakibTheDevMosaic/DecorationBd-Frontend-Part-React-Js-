@@ -147,41 +147,48 @@
             max-width: 100%;
             background-color: black;
             overflow: hidden;
-            .heading{
-                color: white;
-                text-transform: uppercase;
-                padding: 15px 0 3px 15px; 
-                font-size: 20px;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: -3px;
-                    left: 5px;
-                    width: 50%;
-                    height: 3px;
-                    background-color: #077bc4;
-                }
-            }
-            .subCategories{
+            .headingSbcategory{
                 display: flex;
-                align-items: center;
-                gap: 15px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 18px;
-                font-weight: 700;
-                margin-top: 5px;
-                margin-left: 20px;
-                margin-bottom: 15px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                h1{
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 20px 0 0 20px; 
+                    font-size: 21px;
+                    margin-bottom: 5px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: -3px;
+                        left: 15px;
+                        width: 20%;
+                        height: 3px;
+                        background-color: #077bc4;
                     }
                 }
-                
+                .subCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 5px;
+                    margin-left: 10px;
+                    margin-bottom: 20px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
+                    }
+                    
+                }
             }
             .homeDecorProductCard{
                 margin: 5px 5px;
@@ -205,41 +212,49 @@
             background-color: black;
             overflow: hidden;
             margin: 20px 20px 20px 20px;
-            .heading{
-                color: white;
-                text-transform: uppercase;
-                padding: 15px 10px 0 15px; 
-                font-size: 28px;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: -3px;
-                    left: 10px;
-                    width: 32%;
-                    height: 3px;
-                    background-color: #077bc4;
-                }
-            }
-            .subCategories{
+            .headingSbcategory{
                 display: flex;
+                flex-direction: row;
+                justify-content: start;
                 align-items: center;
                 gap: 20px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 22px;
-                font-weight: 500;
-                margin-top: 10px;
-                margin-left: 40px;
-                margin-bottom: 15px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                h1{
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 20px 0 0 20px; 
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: -3px;
+                        left: 15px;
+                        width: 24%;
+                        height: 3px;
+                        background-color: #077bc4;
                     }
                 }
-                
+                .subCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 17px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
+                    }
+                    
+                }
             }
             .homeDecorProductCard{
                 margin: 0 25px 23px 25px;
@@ -352,41 +367,47 @@
             background-color: black;
             overflow: hidden;
             margin: 10px 10px 10px 10px;
-            .heading{
-                color: white;
-                text-transform: uppercase;
-                padding: 20px 10px 0 20px; 
-                font-size: 28px;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: -3px;
-                    left: 15px;
-                    width: 22%;
-                    height: 3px;
-                    background-color: #077bc4;
-                }
-            }
-            .subCategories{
+            .headingSbcategory{
                 display: flex;
                 align-items: center;
-                gap: 45px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 22px;
-                font: 700px;
-                margin-top: 10px;
-                margin-left: 140px;
-                margin-bottom: 20px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                gap: 20px;
+                h1{
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 20px 0 0 20px; 
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: -3px;
+                        left: 15px;
+                        width: 24%;
+                        height: 3px;
+                        background-color: #077bc4;
                     }
                 }
-                
+                .subCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-top: 17px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
+                    }
+                    
+                }
             }
             .homeDecorProductCard{
                 margin: 0 15px 15px 15px;
@@ -499,42 +520,49 @@
             background-color: black;
             overflow: hidden;
             margin: 15px 10px 20px 20px;
-            .heading{
-                color: white;
-                text-transform: uppercase;
-                padding: 20px 10px 0 20px; 
-                font-size: 26px;
-                position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    bottom: -3px;
-                    left: 15px;
-                    width: 24%;
-                    height: 3px;
-                    background-color: #077bc4;
-                }
-            }
-            .subCategories{
+            .headingSbcategory{
                 display: flex;
                 align-items: center;
-                gap: 25px;
-                text-transform: capitalize;
-                color: white;
-                font-size: 22px;
-                font: 700px;
-                margin-top: 10px;
-                margin-left: 140px;
-                margin-bottom: 20px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
-                span{
-                    cursor: pointer;
-                    &:hover{
-                        color: #077bc4;
+                gap: 20px;
+                h1{
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 20px 0 0 20px; 
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: -3px;
+                        left: 15px;
+                        width: 24%;
+                        height: 3px;
+                        background-color: #077bc4;
                     }
                 }
-                
+                .subCategories{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-top: 17px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    border-bottom: 0;
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: #077bc4;
+                        }
+                    }
+                    
+                }
             }
+
             .homeDecorProductCard{
                 margin: 0 10px 10px 10px;
             }
@@ -555,13 +583,13 @@
             // border: 1px solid rgba(0,0,0,0.2);
             .bannerPart{
                 width: 100%;
-                max-height: 230px;
+                max-height: 180px;
                 overflow: hidden;
                 position: relative;
                 cursor: pointer;
                 border: 1px solid rgba(0,0,0,0.4);
-                margin-left: 15px;
-                margin-top: 30px;
+                margin-left: 5px;
+                margin-top: 10px;
                 margin-bottom: 50px;
                 &::before{
                     content: '';
@@ -599,7 +627,7 @@
                     left: 40px;
                     text-transform: capitalize;
                     color: white;
-                    font-size: 50px;
+                    font-size: 25px;
                     z-index: 3;
                     padding: 0 6px 10px 4px;
                 }
@@ -624,14 +652,14 @@
             .featuredPart{
                 width: 100%;
                 background-color: black;
-                margin-left: 15px;
+                margin-left: 5px;
                 // margin-top: 20px;
                 margin-bottom: 20px;
-                max-height: 800px;
+                max-height: 600px;
                 h1{
                     text-transform: uppercase;
                     color: white;
-                    font-size: 26px;
+                    font-size: 22px;
                     padding: 12px 8px;
                     // font: bolder;
                     // display: flex;
@@ -646,34 +674,39 @@
             background-color: black;
             overflow: hidden;
             margin: 28px 20px 20px 30px;
-            .heading{
+            .headingSbcategory{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+              h1{
                 color: white;
                 text-transform: uppercase;
-                padding: 25px 10px 0 25px; 
-                font-size: 32px;
+                padding: 25px 10px 0 25px;
+                margin-bottom: 28px; 
+                font-size: 21px;
                 position: relative;
                 &::after{
                     content: "";
                     position: absolute;
                     bottom: -3px;
-                    left: 15px;
-                    width: 24%;
+                    left: 22px;
+                    width: 25%;
                     height: 3px;
                     background-color: #077bc4;
                 }
-            }
-            .subCategories{
+              }
+              .subCategories{
                 display: flex;
                 align-items: center;
-                gap: 45px;
+                gap: 15px;
                 text-transform: capitalize;
                 color: white;
-                font-size: 25px;
-                font: 700px;
-                margin-top: 10px;
-                margin-left: 240px;
+                font-size: 16px;
+                font-weight: 700;
+                margin-top: 18px;
+                margin-left: 0;
                 margin-bottom: 25px;
-                border-bottom: 3px solid rgb(255, 255, 255,0.9);
+                border-bottom: 0;
                 span{
                     cursor: pointer;
                     &:hover{
@@ -682,8 +715,10 @@
                 }
                 
             }
+            }
+
             .homeDecorProductCard{
-                margin: 0 25px 23px 25px;
+                margin: 0 15px 20px 15px;
             }
         }
     }

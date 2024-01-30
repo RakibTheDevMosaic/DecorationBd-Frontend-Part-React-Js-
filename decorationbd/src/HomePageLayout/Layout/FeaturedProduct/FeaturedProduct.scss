@@ -43,7 +43,7 @@
         width: 100%;
         height: 100%;
         background-color: rgb(255, 255, 255);
-        margin-top: 50px;
+        margin-top: 30px;
         overflow: hidden;
         .prodContainer{
             overflow: hidden;
@@ -55,8 +55,8 @@
             display: flex;
             align-items: center;
             img{
-                height: 75px;
-                width: 75px;
+                height:65px;
+                width: 65px;
                 object-fit: cover;
                 overflow: hidden;
                 margin: 0 16px;
@@ -71,7 +71,7 @@
                 flex-direction: column;
                 h4{
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 14px;
                     cursor: pointer;
                     &:hover{
                         color: gray;

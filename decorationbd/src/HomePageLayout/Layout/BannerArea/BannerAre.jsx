@@ -8,7 +8,7 @@ import pic4 from "../../../Assets/img/bannerImg/banner6.jpg";
 
 const BannerAre = () => {
   return (
-    <div className={`1500px:w-11/12 1024px:w-[98%] 1280px:w-[96%] mx-auto w-[98%] `}>
+    <div className={`1350px:w-[94%] 1024px:w-[98%] 1280px:w-[95%] mx-auto w-[98%] `}>
       <div className="imageContainer grid grid-cols-1 md:grid-cols-3">
         <div className="firstImg">
            <img src={pic1} alt="" />

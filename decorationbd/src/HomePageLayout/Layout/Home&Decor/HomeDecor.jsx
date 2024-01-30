@@ -14,9 +14,9 @@ const HomeDecor = ({open,setOpen}) => {
   const [VArm,setVarm] = useState(false);
   const [Other,setOtharm] = useState(false);
   return (
-    <div className={`1500px:w-11/12 1024px:w-[98%] 1280px:w-[96%] 768px:mx-auto 
-    1500px:ml-[94px] ml-0 homeDecorContainer 1500px:p-[8px] 1024px:p-[5px] p-[2px]`}>
-      <div className="bannerAndFeatureSection ml-[20px] grid grid-cols-1">
+    <div className={`1350px:w-[94%] 1350px:mx-auto 1024px:w-[98%] 1280px:w-[96%] 768px:mx-auto 
+     ml-0 homeDecorContainer  1024px:p-[5px] p-[2px]`}>
+      <div className="bannerAndFeatureSection ml-[10px] grid grid-cols-1">
         <div className="bannerPart">
             <img src={pic} alt="" />
             <h1 className='font-Roboto font-bold'>smart <br /> computing</h1>
@@ -32,9 +32,8 @@ const HomeDecor = ({open,setOpen}) => {
         </div>
       </div>
       <div className="homeDecorProductSection">
-          <div className="heading font-bold">
+          <div className="headingSbcategory font-bold">
               <h1>home & decor</h1>
-          </div>
           <div className="subCategories font-semibold 300px:overflow-x-scroll whitespace-nowrap scroll scroll-smooth 768px:overflow-x-hidden">
           <span className={`${active===1?"text-[#077bc4]":""}`}
           onClick={()=>{
@@ -73,12 +72,14 @@ const HomeDecor = ({open,setOpen}) => {
             setOtharm(true);
           }}>other stand</span>
           </div> 
+          </div>
+
 
            <div>
             {sArm?(
                <div
                className={`grid grid-cols-2 gap-[5px] md:grid-cols-2 md:gap-[5px] lg:grid-cols-4 
-               lg:gap-[8px] xl:grid-cols-5 xl:gap-[5px] 1500px:gap-[10px] homeDecorProductCard`}
+               lg:gap-[8px] xl:grid-cols-5 xl:gap-[5px]  homeDecorProductCard`}
              >
                {productData &&
                  productData.map((i, index) => <HdProductCard data={i} key={index} open={open} setOpen={setOpen}/>)}
@@ -87,7 +88,7 @@ const HomeDecor = ({open,setOpen}) => {
             {dArm?(
              <div
              className={`grid grid-cols-2 gap-[5px] md:grid-cols-2 md:gap-[5px] lg:grid-cols-4 
-             lg:gap-[5px] xl:grid-cols-5 xl:gap-[10px] homeDecorProductCard`}
+             lg:gap-[5px] xl:grid-cols-5 xl:gap-[5px] homeDecorProductCard`}
            >
              {productData &&
                productData.slice(0,6).map((i, index) => <HdProductCard data={i} key={index} open={open} setOpen={setOpen}/>)}
@@ -104,7 +105,7 @@ const HomeDecor = ({open,setOpen}) => {
             {Other?(
               <div
               className={`grid grid-cols-2 gap-[5px] md:grid-cols-2 md:gap-[5px] lg:grid-cols-4 
-              lg:gap-[5px] xl:grid-cols-5 xl:gap-[10px] homeDecorProductCard`}
+              lg:gap-[5px] xl:grid-cols-5 xl:gap-[5px] homeDecorProductCard`}
             >
               {productData &&
                 productData.slice(0,8).map((i, index) => <HdProductCard data={i} key={index} open={open} setOpen={setOpen}/>)}

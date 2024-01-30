@@ -6,6 +6,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 import "./DsubCat.scss";
+import { ImArrowRight } from 'react-icons/im';
 
 const StickyCategory = () => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
@@ -20,7 +21,7 @@ const StickyCategory = () => {
   };
 
   return (
-    <div className='pb-4 w-[380px] bg-[#fff] h-[490px]' style={{
+    <div className='pb-4 w-[350px] bg-[#ffff] h-[368px]' style={{
       border: "1px solid rgba(0,0,0,0.1)",
       borderTop: "none",
     }}>
@@ -30,19 +31,14 @@ const StickyCategory = () => {
           onMouseEnter={() => setHoveredCategory(item)}
           onMouseLeave={() => setHoveredCategory(null)}
           style={{
-            fontSize: "21px",
-            padding: "2.2px",
+            fontSize: "14px",
+            
           }}>
-          <img src={item.image_Url} alt="img"
-            style={{
-              width: "25px",
-              height: "25px",
-              objectFit: "contain",
-              marginLeft: "10px",
-              userSelect: "none",
-            }} />
-          <h3 className='m-3 cursor-pointer select-none h-full'>{item.title}</h3>
-          <div className='absolute right-[5px] arrow'>
+           <div className="flex items-center gap-[5px]">
+           <ImArrowRight  className='ml-[15px] text-[18px] 1350px:text-[17px]'/>
+          <h3 className='m-3 cursor-pointer select-none h-full font-[500]'>{item.title}</h3>
+           </div>
+           <div className='absolute right-[5px] arrow'>
             <IoIosArrowForward />
           </div>
           <div>

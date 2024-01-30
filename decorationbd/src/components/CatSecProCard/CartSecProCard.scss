@@ -52,7 +52,7 @@
         @include md{
             text-transform: uppercase;
             font-size: 21px;
-            margin-left: 25px;
+            margin-left: 35px;
         }
         @include lg{
             text-transform: uppercase;
@@ -66,7 +66,7 @@
         }
         @include xxl{
             text-transform: uppercase;
-            font-size: 18px;
+            font-size: 13px;
             margin-left: 12px;
         }
        }
@@ -80,7 +80,7 @@
         transition: 0.4s ease-in;
         .cart-icon3{
             display: block;
-            font-size: 15px;
+            font-size: 12px;
             margin-right: 5px;
         }
        }

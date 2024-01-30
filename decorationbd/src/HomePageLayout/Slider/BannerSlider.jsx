@@ -57,9 +57,8 @@ const BannerSlider = () => {
   });
 
   return (
-      <div className="flex items-center 1500px:justify-between  justify-center 1280px:w-[94%] mx-auto">
-        <div className="category_dropdown 1280px:block  1500px:mr-[15px] 
-         1500px:ml-[40px]  1280px:mr-[40px]
+      <div className="flex items-center 1280px:justify-between  justify-center 1280px:w-[94%] 1350px:w-[94.15%] mx-auto">
+        <div className="category_dropdown 1280px:block  
         hidden">
             <DropDown/>
         </div>

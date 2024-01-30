@@ -17,10 +17,10 @@ const FeaturedProduct = ({data}) => {
        </Link>
       <div className="price text-[gray]  1500px:mr-[12px] mr-0">
             <span className="lineThroughPrice line-through
-            text-md mr-[6px]">{data.price.toFixed(2)}
-            <strong className='text-[16px] font-[400] font-Roboto'>৳</strong></span>
-            <span className='text-[#007bc4] font-bold text-md'>{data.discount_price.toFixed(2)}<strong 
-            className='text-[18px] font-bold font-Roboto'>৳</strong></span>
+            text-md 1350px:text-[13px] mr-[6px]">{data.price.toFixed(2)}
+            <strong className='text-[16px] 1350px:text-[13px] font-[400] font-Roboto'>৳</strong></span>
+            <span className='text-[#007bc4] font-bold text-md 1350px:text-[13px]'>{data.discount_price.toFixed(2)}<strong 
+            className='text-[18px] 1350px:text-[13px] font-bold font-Roboto'>৳</strong></span>
           </div>
        </div>
      </div>

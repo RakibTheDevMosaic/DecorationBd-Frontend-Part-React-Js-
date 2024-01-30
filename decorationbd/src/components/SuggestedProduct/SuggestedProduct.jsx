@@ -7,14 +7,14 @@ const SuggestedProduct = ({data}) => {
     useEffect(()=>{
         const d = productData && productData.filter((i)=>i.category===data.category);
         setProducts(d);
-    })
+    },[data])
   return (
     <>
     {
         data ? (
             <div className={`768px:p-4 300px:p-3 p-1 ${Styles.section} bg-[#eaeaea]`}>
-                <h2 className={`${Styles.heading} text-[28px] font-[600] text-[orangered]
-                border-b border-white mb-5 ml-[10px]`}>
+                <h2 className={`${Styles.heading} text-[28px] 1350px:text-[22px] 1350px:pb-[5px] font-[600] text-[orangered]
+                border-b border-white mb-5 1350px:mb-3 ml-[10px]`}>
                     Related Products
                 </h2>
                 <div className="productsPart grid grid-cols-1 gap-[10px]

@@ -7,10 +7,11 @@ import {
   AiOutlineSearch,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { BiMenuAltLeft } from "react-icons/bi";
+import { IoMdMenu } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
+import { FaRegUser } from "react-icons/fa6";
 import Navbar from "./Navbar.jsx";
+import AnimationNavbar from "./AnimationNavbar.jsx"
 import { productData } from "../../Static/Data.js";
 import CartPopup from "../../components/CartPopup/CartPopup.jsx"
 import WishListPopup from "../../components/WishListPopup/WishListPopup.jsx"
@@ -55,43 +56,43 @@ const Header = ({dropDown,setDropDown}) => {
   });
   return (
     <>
-      <div className="h-[100%] w-full bg-[#212121]">
+      <div className="1280px:h-[80px] h-full w-full bg-[#212121]">
         <div className={`${Styles.section}`}>
           <div
-            className="hidden 1024px:h-[70px] 1024px:py-[60px] 1280px:flex 
+            className="hidden 1280px:h-[40%] 1280px:py-[10px] 1280px:flex 
        w-full items-center justify-between "
           >
-            <div className="1300px:ml-[80px] 1280px:ml-[40px]">
+            <div className="1350px:ml-[80px] 1280px:ml-[40px]">
               <Link to="/">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo" className="h-[60%]  w-[60%] object-contain"/>
               </Link>
             </div>
             {/* search box */}
-            <div className="relative w-[45%]">
+            <div className="relative w-[40%]">
               <input
                 type="text"
                 placeholder="Search Product..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="h-[40px] w-full px-2 py-2
+                className="h-[34px] w-[88%] px-2  1280px:ml-[110px] 1350px:ml-[100px] text-[12px] 
             border-[#212121] border-[2px] rounded-md outline-none"
               />
               <AiOutlineSearch
-                size={30}
-                className="absolute right-2 top-1.5 cursor-pointer
+                size={20}
+                className="absolute 1280px:right-[-40px] 1350px:right-[-30px] top-1.5 cursor-pointer 
             "
               />
               {searchData && searchTerm && searchData.length !== 0 ? (
                 <div className="absolute max-h-[70vh] bg-white shadow-[gray]
-                shadow-md z-[9] w-[100%]  overflow-y-scroll">
+                shadow-md z-[9] w-[87%]  ml-[103px] overflow-y-scroll">
                   {searchData&& searchData.map((i,index)=>{
                     const d = i.name;
                     const Product_name = d.replace(/\s+/g,"-");
                     return(
                       <Link to={`/product/${Product_name}`} >
-                        <div className="flex w-full items-start py-3" key={index}>
-                          <img src={i.image_Url[0].url} alt="" className="w-[40px] h-[40px] ml-[10px] mr-[10px]"/>
-                          <h1 className="font-semibold text-[#077bc4]">{i.name}</h1>
+                        <div className="flex w-full items-start py-3" key={index} onClick={()=>setSearchTerm("")}>
+                          <img src={i.image_Url[0].url} alt="" className="w-[30px] h-[30px] ml-[10px] mr-[10px]"/>
+                          <h1 className="font-semibold text-[#077bc4] 1280px:text-[14px] 1350px:text-[12px]">{i.name}</h1>
                         </div>
                       </Link>
                     )
@@ -100,19 +101,20 @@ const Header = ({dropDown,setDropDown}) => {
               ):null}
             </div>
             <div className={`${Styles.normal_flex}`}>
-                <div className=" cursor-pointer mr-[15px] flex items-center">
-                  <CgProfile
-                    size={40}
-                    className="ml-5"
-                    color="rgb(255 255 255 / 83%)"
-                  />
-                  <span className="text-white font-mono text-[13px] ml-2">
-                    Hello sir,
-                    <br />
-                    <strong className="uppercase text-sm text-[14px] items-center">
-                      <span onClick={()=>navigate('/login')}>login</span> / <span onClick={()=>navigate('/signUp')}>registration</span>
-                    </strong>
-                  </span>
+                <div className=" cursor-pointer  flex items-center gap-[10px] px-[8px] py-[4px]
+                rounded-md group hover:bg-white hover:text-[#242424]"
+                onClick={()=>navigate('/login')}>
+                  <FaRegUser
+                    size={18}
+                    className=" group-hover:text-black text-white text-[14px]"
+                  /><span className="text-white group-hover:text-black font-[400] capitalize text-[14px]"
+                  >login</span>  
+
+                </div><span className="text-white px-[15px]">|</span>
+                <div className="cursor-pointer rounded-md group hover:bg-white px-[5px] py-[4px]"
+                onClick={()=>navigate('/signUp')}>
+                <span className="text-white group-hover:text-black font-[400]  capitalize text-[14px]"
+                  >sign up</span>
                 </div>
            
             </div>
@@ -124,40 +126,28 @@ const Header = ({dropDown,setDropDown}) => {
               active ? (<div className={`${
                 active === true ? "shadow shadow-[gray] fixed top-0 left-0 z-10 headerAnimation" : null
               }
-           hidden 1280px:flex items-center justify-between w-full bg-[#eaeaea] h-[70px] z-[9]`}>
-            <div className={`1500px:${Styles.section} 1280px:w-[97%] mx-auto relative ${Styles.normal_flex} justify-between `}>
+           hidden 1280px:flex items-center justify-between w-full bg-[#242424] h-[60px] z-[9]`}>
+            <div className={`1350px:${Styles.section} 1280px:w-[97%] mx-auto relative ${Styles.normal_flex} justify-between `}>
             <div className="overflow-hidden h-full p-1 m-1">
                 <Link to={`/`}>
-                 <img src={logo} alt="" className="h-[73px] w-full object-cover"/>
+                 <img src={logo} alt="" className="h-[50%] w-[50%] object-contain"/>
                 </Link>
               </div>
               <div className={`${Styles.normal_flex}`}>
-            <Navbar ActiveHeading={ActiveHeading} setActiveHeading={setActiveHeading}/>
+            <AnimationNavbar ActiveHeading={ActiveHeading} setActiveHeading={setActiveHeading}/>
           </div>
           <div className="flex">
             <div className={`${Styles.normal_flex}`}>
-              <div className="relative cursor-pointer mr-[15px] " 
-              onClick={()=>setOpenWishlist(true)}>
-                <AiOutlineHeart size={30} />
-                <span
-                  className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-4
-              h-4  p-0 m-0 text-white font-mono text-[12px] text-center"
-                >
-                  0
-                </span>
-              </div>
-            </div>
-            <div className={`${Styles.normal_flex}`}>
               <div className="relative cursor-pointer mr-[15px] " onClick={()=>setOpencart(true)}>
-                <AiOutlineShoppingCart size={30} />
+                <AiOutlineShoppingCart size={25} className="text-white"/>
                 <span
-                  className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-4
-              h-4  p-0 m-0 text-white font-mono text-[12px] text-center"
+                  className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-[14px]
+              h-[14px]  p-0 m-0 text-white font-mono text-[10px] text-center"
                 >
                   0
                 </span>
               </div>
-              <span className="text-lg font-[600]">
+              <span className="text-sm font-[600] text-white">
                 0.00<strong className="mr-2">৳</strong>
               </span>
             </div>
@@ -166,22 +156,23 @@ const Header = ({dropDown,setDropDown}) => {
 
               </div>):(<div className={`${active === true ? "shadow shadow-[gray] fixed top-0 left-0 z-10 headerAnimation" : null
         }
-     hidden 1280px:flex items-center justify-between w-full bg-[#eaeaea] h-[70px] z-[99]`}>
-              <div className={`1500px:${Styles.section} 1280px:w-[97%] mx-auto relative ${Styles.normal_flex} justify-between `}>
-              <div className="relative h-[65px] w-[380px]  ml-5 hidden 1280px:block"
+     hidden 1280px:flex items-center justify-between w-full bg-[#eaeaea] h-[60px] z-[99] 
+     border-b-[1px] border-[rgba(0,0,0,0.3)]`}>
+              <div className={`1350px:${Styles.section} 1280px:w-[97%] mx-auto relative ${Styles.normal_flex} justify-between `}>
+              <div className="relative h-[56px] w-[350px] mt-[2px] ml-5 hidden 1280px:block"
               onClick={()=>{
                 setDropDown(!dropDown);
               }}>
-                <BiMenuAltLeft size={30} className="absolute left-2 top-3" />
+                <IoMdMenu size={22} className="absolute left-2 top-4 text-white" />
                 <button
                   className="h-[100%] w-full flex items-center justify-between
-            pl-10 py-2 bg-[#007bc4] font-sans text-xl font-[500] select-none rounded-t-md uppercase"
+            pl-10 py-2 bg-[#007bc4] font-sans text-[14px] font-[500] select-none rounded-t-md uppercase text-white"
                 >
                   browse categories
                 </button>
                 <IoIosArrowDown
-                  size={20}
-                  className="absolute right-2 top-4 cursor-pointer"
+                  size={18}
+                  className="absolute right-2 top-4 cursor-pointer text-white"
                 />
               </div>
               <div className={`${Styles.normal_flex}`}>
@@ -189,35 +180,23 @@ const Header = ({dropDown,setDropDown}) => {
           </div>
           <div className="flex">
             <div className={`${Styles.normal_flex}`}>
-              <div className="relative cursor-pointer mr-[15px] " 
-              onClick={()=>setOpenWishlist(true)}>
-                <AiOutlineHeart size={30} />
-                <span
-                  className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-4
-              h-4  p-0 m-0 text-white font-mono text-[12px] text-center"
-                >
-                  0
-                </span>
-              </div>
-            </div>
-            <div className={`${Styles.normal_flex}`}>
               <div className="relative cursor-pointer mr-[15px] " onClick={()=>setOpencart(true)}>
-                <AiOutlineShoppingCart size={30} />
+                <AiOutlineShoppingCart size={25} />
                 <span
-                  className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-4
-              h-4  p-0 m-0 text-white font-mono text-[12px] text-center"
+                  className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-[14px]
+              h-[14px]  p-0 m-0 text-white font-mono text-[10px] text-center"
                 >
                   0
                 </span>
               </div>
-              <span className="text-lg font-[600]">
+              <span className="text-sm font-[600]">
                 0.00<strong className="mr-2">৳</strong>
               </span>
             </div>
           </div>
           {
             dropDown? (
-              <div className={`absolute top-[66px] left-[20px] dropDown`}>
+              <div className={`absolute top-[58px] left-[20px] dropDown`}>
                 <DropDown/>
               </div>
             ):null
@@ -246,7 +225,7 @@ const Header = ({dropDown,setDropDown}) => {
         <div className="w-full flex items-center justify-between">
           <div onClick={()=>{setOpenMobileSideBar(true)}} className="flex items-center 768px:gap-[5px]
           gap-[2px]">
-            <BiMenuAltLeft size={30}
+            <IoMdMenu size={30}
             className="ml-4 text-white"
             /> <span className="uppercase font-semibold 
             hidden 768px:inline 768px:text-[18px] text-white">menu</span>

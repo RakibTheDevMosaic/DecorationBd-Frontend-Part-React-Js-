@@ -12,14 +12,14 @@ const CatProdSec = ({open,setOpen}) => {
   const [VArm,setVarm] = useState(false);
   const [Other,setOtharm] = useState(false);
   return (
-    <div className='1500px:w-11/12 1024px:w-[98%] 1280px:w-[96%] 
-    w-[100%] 1500px:ml-[94px]  mx-auto catProdSection'>
+    <div className='1350px:w-[94%] 1350px:mx-auto 1024px:w-[98%] 1280px:w-[96%] 
+    w-[100%]   mx-auto catProdSection'>
     <div
       className={`w-full h-full catProdContainer`}>
-      <div className={`1024px:${Styles.heading} text-start`}>
+      <div className={` text-start flex 300px:flex-col 300px:gap-[5px] 768px:flex-row 768px:gap-[30px] 1024px:gap-[40px]
+      1350px:gap-[60px] 768px:items-center`}>
         <h1 className='font-semibold'>CATEGORIES</h1>
-      </div>
-      <div className="catsubCategories font-semibold 300px:overflow-x-scroll whitespace-nowrap scroll scroll-smooth 768px:overflow-x-hidden">
+        <div className="catsubCategories font-semibold 300px:overflow-x-scroll whitespace-nowrap scroll scroll-smooth 768px:overflow-x-hidden">
       <span className={`${active===1?"text-[#077bc4]":""}`}
           onClick={()=>{
             setActive(1);
@@ -57,6 +57,8 @@ const CatProdSec = ({open,setOpen}) => {
             setOtharm(true);
           }}>other stand</span>
       </div>
+      </div>
+
       <div>
       {sArm?(
          <div
