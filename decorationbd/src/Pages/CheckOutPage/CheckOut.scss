@@ -7,20 +7,10 @@
 }
 .openCoupon{
     opacity: 1;
-    max-height: 150px;
+    max-height: 50px;
     transition: all 1s ease;
 }
-.closeShip{
-    opacity: 0;
-    max-height: 0;
-    overflow-y: hidden;
-    transition: all 1s ease;
-}
-.openShip{
-    opacity: 1;
-    max-height: 750px;
-    transition: all 1s ease;
-}
+
 .closePcod{
     opacity: 0;
     max-height: 0;
@@ -37,6 +27,27 @@
         transition: all 1s ease;
     }
 }
+.closeButton2{
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 1s ease;
+}
+.openButton2{
+    opacity: 1;
+    max-height: 250px;
+    transition: all 1s ease;
+    @include md{
+        opacity: 1;
+        max-height: 200px;
+        transition: all 1s ease;
+    }
+    @include xxl{
+        opacity: 1;
+        max-height: 180px;
+        transition: all 1s ease;
+    }
+}
 .closeButton{
     opacity: 0;
     max-height: 0;
@@ -50,6 +61,11 @@
     @include md{
         opacity: 1;
         max-height: 200px;
+        transition: all 1s ease;
+    }
+    @include xxl{
+        opacity: 1;
+        max-height: 120px;
         transition: all 1s ease;
     }
 }

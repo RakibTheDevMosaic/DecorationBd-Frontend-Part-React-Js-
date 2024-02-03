@@ -8,7 +8,7 @@ import { ImArrowRight } from "react-icons/im";
 
 import "./DropDown.scss";
 
-const DropDown = () => {
+const DropDown = ({setDropDown}) => {
     const [hoveredCategory, setHoveredCategory] = useState(null);
     const navigate = useNavigate();
   
@@ -27,7 +27,7 @@ const DropDown = () => {
       }}>
         {categoriesData && categoriesData.map((item) => (
           <div key={item.id} className={`${Styles.normal_flex} relative hover:bg-gray-300 catData`}
-            onClick={() => handleSubmit(item)}
+            onClick={() => {handleSubmit(item); setDropDown(false)}}
             onMouseEnter={() => setHoveredCategory(item)}
             onMouseLeave={() => setHoveredCategory(null)}
             style={{
@@ -52,6 +52,7 @@ const DropDown = () => {
                            onClick={(e) => {
                             e.stopPropagation(); // Prevent parent onClick from triggering
                             handleSubCategorySubmit(item, subcat);
+                            setDropDown(false);
                           }}>{subcat.title}</span>
                       </div>
                     ))}

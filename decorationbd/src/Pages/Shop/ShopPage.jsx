@@ -162,12 +162,12 @@ const ShopPage = ({open,setOpen}) => {
             }} ><span className={`${isClicked===10?"text-[#077bc4]":""}`}>10</span></span>
           </div>
         </div>
-        <div className="my-1 w-full p-1 hidden 1280px:inline-block">
-          <div className="filterPrice 1280px:w-[140px] 1350Px:w-[120px] relative
+        <div className="mt-[4px] mb-[6px] w-full p-1 hidden 1280px:inline-block bg-[#009ccc]">
+          <div className="filterPrice 1280px:w-[140px] 1350px:w-[110px] relative
            py-1 px-1 border-[rgba(0,0,0,0.2)] cursor-pointer">
-            <div className="flex items-center justify-between" onClick={()=>setFilterPrice(!filterPrice)}>
+            <div className="flex items-center justify-between text-white" onClick={()=>setFilterPrice(!filterPrice)}>
             <h4 className='1350px:text-[13px] font-[600]'>Filter by price</h4>
-              <MdOutlineKeyboardArrowDown className='text-[15px] text-[#242424]'/>
+              <MdOutlineKeyboardArrowDown className='text-[15px] text-[#242424] text-white'/>
               </div>
               {
                 filterPrice && (
@@ -204,7 +204,7 @@ const ShopPage = ({open,setOpen}) => {
                 ))
               }
             </div>):( <div className="productsPart grid grid-cols-2 gap-[5px]
-        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5">
+        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5 py-1">
            {recoeds && recoeds.map((i,index)=>(
               <ShopProduct data={i} key={index} open={open} setOpen={setOpen}/>
            ))}
@@ -223,7 +223,7 @@ const ShopPage = ({open,setOpen}) => {
                 ))
               }
             </div>):( <div className="productsPart grid grid-cols-2 gap-[5px]
-        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5">
+        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5 py-1">
            {recoeds && recoeds.map((i,index)=>(
               <ShopProduct data={i} key={index} open={open} setOpen={setOpen}/>
            ))}
@@ -242,7 +242,7 @@ const ShopPage = ({open,setOpen}) => {
                 ))
               }
             </div>):( <div className="productsPart grid grid-cols-2 gap-[5px]
-        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5">
+        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5 py-1">
            {recoeds && recoeds.map((i,index)=>(
               <ShopProduct data={i} key={index} open={open} setOpen={setOpen}/>
            ))}
@@ -261,7 +261,7 @@ const ShopPage = ({open,setOpen}) => {
                 ))
               }
             </div>):( <div className="productsPart grid grid-cols-2 gap-[5px]
-        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5">
+        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5 py-1">
            {recoeds && recoeds.map((i,index)=>(
               <ShopProduct data={i} key={index} open={open} setOpen={setOpen}/>
            ))}
@@ -286,7 +286,7 @@ const ShopPage = ({open,setOpen}) => {
             </div>
           ): (
             <div className="productsPart grid grid-cols-2 gap-[5px]
-        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5">
+        md:grid-cols-3 md:gap[15px] lg:grid-cols-4 xl:grid-cols-5 py-1">
            {recoeds && recoeds.map((i,index)=>(
               <ShopProduct data={i} key={index} open={open} setOpen={setOpen}/>
            ))}

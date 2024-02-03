@@ -19,9 +19,7 @@ const CartPage = () => {
   const incrementQuantity = ()=>{
     setQuntity(quantity+1);
   }
-  const [shippingAddress,setShippingAddress] = useState("");
-  const [shippingDropDown,setShippingDropDwon] = useState(false);
-  const [shippingForm,setShippingform] = useState(false);
+  const[ischecked,setIsChecked] = useState(true);
   const data = [
     {
       name:"Iphone 14 pro max 256 gb ssd and 8 gb ram silver",
@@ -33,7 +31,7 @@ const CartPage = () => {
     }
   ]
   return (
-    <div className={` 1350px:w-[92%] 1280px:w-[95%] 1024px:w-[94%] w-[99%] mx-auto`}>
+    <div className={` 1350px:w-[88%] 1280px:w-[95%] 1024px:w-[94%] w-[99%] mx-auto`}>
       <div className="flex items-center flex-col 1280px:flex-row w-full 1280px:mt-[50px] 1350px:mt-[30px]
        mt-[100px] gap-[20px]">
       <div className="1500px:w-[56%] 1024px:w-[90%] 1280px:w-[60%]  w-[100%] overflow-hidden">
@@ -45,29 +43,29 @@ const CartPage = () => {
               <thead className='w-full'>
                 <tr className='w-full border-b border-[rgba(0,0,0,0.2)]'>
                   <th className='1500px:w-[50%] 1280px:w-[30%] 768px:w-[40%] w-[30%] 
-                  text-center font-semibold 768px:text-[20px] 1350px:text-[16px] text-[17px] 1500px:px-[150px] 1280px:px-[90px]
+                  text-center font-[500] 768px:text-[20px] 1350px:text-[14px] text-[17px] 1500px:px-[150px] 1280px:px-[90px]
                   768px:px-[40px] px-[30px] pb-[10px]'>PRODUCT</th>
-                  <th className='w-[10%] text-center font-semibold 1280px:text-[20px] 1350px:text-[16px] 768px:text-[18px] px-[20px] pb-[10px]'>SKU</th>
-                  <th className='w-[10%] text-center font-semibold 1280px:text-[20px] 1350px:text-[16px] 768px:text-[18px] px-[20px] pb-[10px]'>PRICE</th>
-                  <th className='w-[20%] 1350px:w-[4%] text-center font-semibold 1280px:text-[20px] 1350px:text-[16px] 768px:text-[18px] px-[20px] 1350px:px-[10px] pb-[10px]'>QUANTITY</th>
-                  <th className='w-[10%] text-center font-semibold 1280px:text-[20px] 1350px:text-[16px] 768px:text-[18px] px-[10px] pb-[10px]'>SUBTOTAL</th>
+                  <th className='w-[10%] text-center font-[500] 1280px:text-[20px] 1350px:text-[14px] 768px:text-[18px] px-[20px] pb-[10px]'>SKU</th>
+                  <th className='w-[10%] text-center font-[500] 1280px:text-[20px] 1350px:text-[14px] 768px:text-[18px] px-[20px] pb-[10px]'>PRICE</th>
+                  <th className='w-[20%] 1350px:w-[4%] text-center font-[500] 1280px:text-[20px] 1350px:text-[14px] 768px:text-[18px] px-[20px] 1350px:px-[10px] pb-[10px]'>QUANTITY</th>
+                  <th className='w-[10%] text-center font-[500] 1280px:text-[20px] 1350px:text-[14px] 768px:text-[18px] px-[10px] pb-[10px]'>SUBTOTAL</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className='w-full border-b border-[rgba(0,0,0,0.2)]'>
                   <td className='flex items-center 768px:py-3 py-1'>
-                    <RxCross2  className='text-[red] 768px:px-[10px] px-[1px] font-bold mr-[5px] 
-                    768px:text-[50px] text-[20px]'/>
-                    <img src={data[0].img.url} alt="" className='768px:w-[70px] w-[40px] 768px:h-[70px] 1350px:h-[65px] 1350px:w-[65px]
+                   <input type="checkbox" className='h-[12px] w-[12px] mr-[5px]' checked={ischecked} required
+                   onClick={()=>setIsChecked(!ischecked)}/>
+                    <img src={data[0].img.url} alt="" className='768px:w-[70px] w-[40px] 768px:h-[70px] 1350px:h-[50px] 1350px:w-[50px]
                     h-[40px] 768px:px-[10px] px-[2px] object-cover'/>
-                    <h4 className='font-semibold 1500px:text-[18px] 1350px:text-[14px]
+                    <h4 className='font-semibold 1500px:text-[18px] 1350px:text-[13px]
                     768px:text-[16px] 1280px:text-[16px] 
-                    text-[14px] text-[#242424] 768px:px-[6px] px-[1px]'>{data[0].name}</h4>
+                    text-[14px] text-[#242424] 768px:px-[6px] px-[1px]'>{data[0].name.length>15?data[0].name.slice(0,15)+"...":data[0].name}</h4>
                   </td>
                   <td className='text-center 1500px:px-[10px] 1280px:px-[5px] px-[5px] 
-                  font-semibold 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] text-[16px] text-[#242424] py-3'>{data[0].sku}</td>
+                  font-[500] 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] text-[16px] text-[#242424] py-3'>{data[0].sku}</td>
                   <td className='text-center mx-[15px] 
-                  font-semibold 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] 768px:text-[16px] text-[#242424] py-3'>{data[0].price.toFixed(2)} <strong className='text-[16px]'>৳ </strong></td>
+                  font-semibold 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] 768px:text-[16px] text-[#242424] py-3'>{data[0].price.toFixed(2)} <strong className='text-[16px] 1350px:text-[13px]'>৳ </strong></td>
                   <td className='text-center px-[45px] 1280px:px-[35px] 1500px:px-[45px] 1350px:px-[50px] 
                   font-semibold 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] 768px:text-[16px] text-[#242424] py-3'>
                    <div className='flex items-center 1280px:gap-[15px] gap-[10px]'>
@@ -80,8 +78,13 @@ const CartPage = () => {
                     onClick={incrementQuantity}>+</button>
                    </div>
                   </td>
-                  <td className='text-center px-[10px] 1280px:px-[5px] 1500px:px-[10px] 
-                  font-semibold 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] 768px:text-[16px] text-[#077bc4] py-3'>{(data[0].price*quantity).toFixed(2)} <strong className='text-[16px]'>৳ </strong></td>
+                  <td className=' text-center px-[10px] 1280px:px-[5px] 1500px:px-[10px] 
+                  font-semibold 1500px:text-[18px] 1280px:text-[16px] 1350px:text-[13px] 768px:text-[16px] text-[#077bc4] py-3
+                  '>{(data[0].price*quantity).toFixed(2)} <strong className='text-[16px] 1350px:text-[13px]'>৳ </strong>
+                 
+                  </td>
+                  <td className='text-center px-[20px]'><RxCross2  className='text-[red]  font-bold ml-[5px] 
+                    768px:text-[16px] text-[18px]'/></td>
                 </tr>
               </tbody>
             </table>
@@ -122,99 +125,65 @@ const CartPage = () => {
                 </div>
               </div>
             </div>
-
-
-            <div className="w-full overflow-hidden 1280px:mt-[80px] mt-[50px] 768px:ml-[25px] 1280px:ml-0">
-              <input type="text" className='1280px:w-[40%] w-[60%] py-2 768px:py-[10px] 1280px:py-2 1350px:py-[6px] 
-              px-2 1280px:mr-[30px] 768px:mr-[15px] mr-[10px] 1350px:text-[13px]
-             ml-[3px] 768px:ml-0 border border-[gray] rounded-[50px] outline-none' placeholder='Coupon code'/>
-              <button className='768px:w-[30%] 1350px:w-[21%] w-[35%] py-[10px] 1350px:py-[8px] uppercase 1280px:text-[18px] 1350px:text-[13px]
-               768px:text-[16px] text-[14px]
-              font-semibold bg-[#077bc4] text-white overflow-hidden
-              outline-none border-none 768px:rounded-[50px] rounded-[40px] 1280px:ml-[20px]
-              768px:ml-[10px] ml-0'>apply coupon</button>
-            </div> 
         </div>
       </div>
-      <div className="1280px:w-[35%] 1350px:w-[32%] 768px:w-[80%] w-[100%] border-[2px] mt-[30px] 1350px:mt-[8px] shadow 768px:shadow-[#077bc4] 
+      <div className="1280px:w-[35%] 1350px:w-[28%] 768px:w-[80%] w-[100%] border-[2px] mt-[30px] 1350px:mt-[8px] shadow 768px:shadow-[#077bc4] 
       768px:py-[10px] 1350px:py-[4px] py-[6px] shadow-[orangered]
       border-[rgba(0,0,0,0.2)] outline-none 1280px:ml-[50px] mb-[50px] 768px:mb-0">
-        <div className="w-full 768px:p-3 p-1">
-          <h1 className='768px:text-[28px] 1350px:text-[22px] text-[26px] text-[#077bc4] 
-          font-semibold capitalize px-3 768px:py-3 py-2 768px:my-[8px] my-[5px]'>cart total</h1>
+        <div className="w-full 768px:p-3 1350px:p-1 p-1">
+          <h1 className='768px:text-[28px] 1350px:text-[20px] text-[26px] text-[#077bc4] 
+          font-[500] capitalize px-3 768px:py-3 py-2 768px:my-[8px] my-[5px]'>cart summary</h1>
          <div className="border-b border-[rgba(0,0,0,0.2)] my-[10px] py-[10px]">
          <div className="flex items-center justify-between 768px:px-3 px-1">
-            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[14px] font-semibold text-[#242424]'>subtotal :</h5>
-            <span className='768px:text-[18px] text-[16px] 1350px:text-[13px] font-semibold text-[#077bc4]
-            '>{(data[0].price*quantity).toFixed(2)}<strong>৳</strong></span>
-          </div>
-          <div className="flex items-center justify-between 768px:px-3 px-1 py-[4px]">
-            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[14px] font-semibold text-[#242424]'>delivery charges :</h5>
-            <span className='768px:text-[18px] text-[16px] 1350px:text-[13px] font-semibold text-[#077bc4]
-            '>150.00<strong>৳</strong></span>
-          </div>
-          <div className="flex items-center justify-between 768px:px-3 px-1 py-[4px]">
-            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[14px] font-semibold text-[#242424]'>apply coupon :</h5>
-            <span className='768px:text-[18px] text-[16px] 1350px:text-[13px] font-semibold text-[#077bc4]
+            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[13px] font-[500] text-[#242424]'>subtotal :</h5>
+           {ischecked?(
+             <span className='768px:text-[18px] text-[16px] 1350px:text-[11px] font-[600] text-[#077bc4]
+             '>{(data[0].price*quantity).toFixed(2)}<strong>৳</strong></span>
+           ):(
+            <span className='768px:text-[18px] text-[16px] 1350px:text-[11px] font-[600] text-[#077bc4]
             '>0.00<strong>৳</strong></span>
+           )}
+          </div>
+          <div className="flex items-center justify-between 768px:px-3 px-1 py-[4px]">
+            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[13px] font-[500] text-[#242424]'>delivery charges :</h5>
+            {ischecked?(
+                          <span className='768px:text-[18px] text-[16px] 1350px:text-[11px] font-semibold text-[#077bc4]
+                          '>150.00<strong>৳</strong></span>
+            ):(
+              <span className='768px:text-[18px] text-[16px] 1350px:text-[11px] font-semibold text-[#077bc4]
+              '>0.00<strong>৳</strong></span>
+            )}
+          </div>
+          <div className="flex items-center justify-between 768px:px-3 px-1 py-[4px]">
+           <input type="number" placeholder='Enter coupon code' className='1350px:text-[10px] py-1 1350px:py-[3px]
+           px-[10px] w-[52%] outline-none border border-[rgba(0,0,0,0.2)]'/>
+           <button className='300px:text-[14px] 1350px:text-[10px] 
+           1350px:py-[3px] py-1 text-white uppercase w-[22%] 1350px:h-[24px] 300px:h-[30px] 
+           text-center bg-[#25a5d8]'>Apply</button>
           </div>
           <div className="flex items-center justify-between 768px:px-3 px-1 py-[2px]">
-            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[14px] font-semibold text-[#242424]'>Estimated Delivery Date :</h5>
-            <span className='768px:text-[18px] text-[16px] 1350px:text-[13px] font-semibold text-[#f51919]
+            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[13px] font-[500] text-[#242424]'>Estimated Delivery Date :</h5>
+            <span className='768px:text-[18px] text-[16px] 1350px:text-[12px] font-[500] text-[orangered]
             '>December 21, 2023</span>
           </div>
-          <div className="flex items-center justify-between 768px:px-3 px-1 py-[2px]">
-            <h5 className='capitalize 768px:text-[18px] text-[16px] 1350px:text-[14px] font-semibold text-[#242424]'>shipping address :</h5>
-            <span className='768px:text-[18px] text-[16px] font-semibold text-[#242424]
-            ' onClick={()=>{setShippingDropDwon(!shippingDropDown);
-            setShippingform(false)}}><span className='cursor-pointer'>{shippingAddress?(<span>{shippingAddress}</span>):(<span className='1350px:text-[13px]'>No Address</span>)}</span>
-            <IoIosArrowDown  className={`inline-block ml-[5px] cursor-pointer mb-[5px] text-[16px] 1350px:text-[13px] 1350px:mt-[3px]
-            ${shippingDropDown?"rotate":"notRotate"}`}
-            /></span>
-          </div>
-           <div className={`text-right 768px:px-3 px-1 py-[2px] ${shippingDropDown?"opened":"notOpend"} overflow-hidden`}>
-            <span className='768px:text-[18px] text-[16px] 1350px:text-[13px] font-semibold py-[4px] px-[16px] cursor-pointer rounded-md
-            capitalize text-[#242424]'defaultValue="shipping address 2"
-            onClick={()=>setShippingAddress("shipping address 1")}>shipping address 1</span><br />
-            <span className='768px:text-[18px] text-[16px] 1350px:text-[13px] font-semibold py-[4px] px-[16px] cursor-pointer rounded-md
-            capitalize text-[#242424]'defaultValue="shipping address 3"
-            onClick={()=>setShippingAddress("shipping address 2")}>shipping address 2</span>
-           </div>
-
-           <div className="text-right px-4 text-[#f51919] cursor-pointer" onClick={()=>{
-            setShippingform(!shippingForm);
-            setShippingDropDwon(false);
-           }}>
-            <IoIosAddCircleOutline  className='inline-block mr-[6px] text-[16px] 1350px:text-[13px]'/>
-            <span className='capitalize font-semibold 1350px:text-[13px]'>add address</span>
-           </div>
-            <div className={`w-[100%] 768px:px-4 px-1 py-[5px] text-right ${shippingForm?"openForm":"notOpenForm"} overflow-hidden`}>
-              <input type="text" placeholder='***Enter your name' className='outline-none
-              border border-[gray]  p-[8px] 1350px:p-[5px] w-[70%] mb-[10px] rounded-[50px] text-center 1350px:text-[13px]'/>
-              <input type="email" placeholder='***Enter your email' className='outline-none
-              border border-[gray]  p-[8px] 1350px:p-[5px] w-[70%] mb-[10px] rounded-[50px] text-center 1350px:text-[13px]'/>
-              <input type="text" placeholder='***Enter your address' className='outline-none
-              border border-[gray]  p-[8px] 1350px:p-[5px] w-[70%] mb-[10px] rounded-[50px] text-center 1350px:text-[13px]'/>
-              <input type="text" placeholder='***Enter your city' className='outline-none
-              border border-[gray]  p-[8px] 1350px:p-[5px] w-[70%] mb-[10px] rounded-[50px] text-center 1350px:text-[13px]'/>
-              <input type="number" placeholder='***Enter zipcode' className='outline-none
-              border border-[gray]  p-[8px] 1350px:p-[5px] w-[70%] mb-[10px] rounded-[50px] text-center 1350px:text-[13px]'/>
-              <button className='outline-none border-none px-[10px] 1350px:text-[14px]
-              py-[6px] 1350px:py-[4px] bg-[#077bc4] rounded-[50px] mt-[10px] w-[40%] 1350px:w-[32%] 1350px:mr-[6px] text-white font-semibold'>
-                Update
-              </button>
-            </div>
          </div>
          <div className="flex items-center justify-between 768px:px-3 px-1">
-            <h3 className='capitalize 768px:text-[25px] 1350px:text-[15px] text-[22px] font-semibold text-[#242424]'>Total :</h3>
-            <span className='768px:text-[20px] text-[18px] 1350px:text-[15px] font-semibold text-[#077bc4]
-            '>{(data[0].price*quantity+150.00).toFixed(2)}<strong>৳</strong></span>
+            <h3 className='capitalize 768px:text-[25px] 1350px:text-[13px] text-[22px] font-semibold text-[#242424]'>Total :</h3>
+              {
+                ischecked?(
+                  <span className='768px:text-[20px] text-[18px] 1350px:text-[12px] font-semibold text-[#077bc4]
+                  '>{(data[0].price*quantity+150.00).toFixed(2)}<strong>৳</strong></span>
+                ):(
+                  <span className='768px:text-[20px] text-[18px] 1350px:text-[12px] font-semibold text-[#077bc4]
+                  '>0.00<strong>৳</strong></span>
+                )
+              }
           </div>
           <div className="w-full 768px:px-4 px-1 text-center mb-[10px] mt-[50px]">
             <Link to="/checkout">
-              <button className='768px:w-[60%] w-[70%] px-[10px] py-[8px] 768px:text-[16px] text-[15px] 1350px:text-[13px]
-              uppercase outline-none border-none rounded-[50px] bg-[#f51919] text-white font-semibold'>
-                procced to checkout
+              <button className='768px:w-[60%] 1280px:w-[65%] 1350px:w-[60%] w-[70%] px-[10px] py-[8px] 768px:text-[16px] text-[16px] 1350px:text-[10px]
+              uppercase outline-none border-none rounded-[50px] bg-[#f57224] text-white font-[500]'>
+                procced to checkout ({ischecked?(data.length):0})
               </button>
             </Link>
           </div>

@@ -19,14 +19,14 @@ const Register = () => {
           Register as a new user
         </h2>
       </div>
-      <div className="mt-8 1350px:mt-[18px] sm:mx-auto sm:w-full sm:max-w-md 1350px:w-[80%] 1350px:max-w-[400px] 
+      <div className="mt-8 1350px:mt-[18px] sm:mx-auto sm:w-full sm:max-w-md 1350px:w-[100%] 1350px:max-w-[350px] 
       rounded-sm shadow shadow-[#212121]">
         <div className="bg-white py-8 1350px:py-5 px-4 shadow sm:rounded-lg sm:px-10">
-          <form className="space-y-6 1350px:space-y-5">
+          <form className="space-y-6 1350px:space-y-2">
             <div>
               <label
                 htmlFor="username"
-                className="block text-sm 1350px:text-[13px] font-medium text-gray-700"
+                className="block text-sm 1350px:text-[12px] font-medium text-gray-700"
               >
                 Username
               </label>
@@ -41,14 +41,14 @@ const Register = () => {
                   onChange={(e) => setUsername(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 1350px:py-1 border border-gray-300 rounded-md 
                   shadow-sm placeholder-gray-400 
-                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[13px]"
+                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[10px]"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm 1350px:text-[13px] font-medium text-gray-700"
+                className="block text-sm 1350px:text-[12px] font-medium text-gray-700"
               >
                 Email address
               </label>
@@ -63,14 +63,14 @@ const Register = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 1350px:py-1 border border-gray-300 rounded-md 
                   shadow-sm placeholder-gray-400 
-                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[13px]"
+                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[12px]"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm 1350px:text-[13px] 1font-medium text-gray-700"
+                className="block text-sm 1350px:text-[12px] 1font-medium text-gray-700"
               >
                 Password
               </label>
@@ -85,15 +85,15 @@ const Register = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 1350px:py-1 border border-gray-300 rounded-md 
                   shadow-sm placeholder-gray-400 
-                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[13px]"
+                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[10px]"
                 />
                 {visible? <AiOutlineEye 
                 
-                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[18px]"
+                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[16px]"
                 onClick={()=>setVisible(false)} 
                 />  : <AiOutlineEyeInvisible 
                
-                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[18px]"
+                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[16px]"
                 onClick={()=>setVisible(true)} 
                 />}
               </div>
@@ -101,7 +101,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="password2"
-                className="block text-sm 1350px:text-[13px] font-medium text-gray-700"
+                className="block text-sm 1350px:text-[12px] font-medium text-gray-700"
               >
                 Confirm Password
               </label>
@@ -116,43 +116,43 @@ const Register = () => {
                   onChange={(e) => setPassword2(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 1350px:py-1 border border-gray-300 rounded-md 
                   shadow-sm placeholder-gray-400 
-                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[13px]"
+                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 1350px:text-[10px]"
                 />
                 {ConfirmPassvisible? <AiOutlineEye 
                
-                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[18px]"
+                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[16px]"
                 onClick={()=>setConfirmPassVisible(false)} 
                 />  : <AiOutlineEyeInvisible 
                 
-                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[18px]"
+                className="absolute right-2 top-2 cursor-pointer text-gray-500 text-[22px] 1350px:text-[16px]"
                 onClick={()=>setConfirmPassVisible(true)} 
                 />}
               </div>
             </div>
             <div className={`${styles.normal_flex} justify-between`}>
                 <div className={`${styles.normal_flex}`}>
-                     <button type="submit" className=" relative 768px:w-[180px] 1350px:w-[150px] 
-                     w-[122px] 300px:w-[155px] h-[40px] 1350px:h-[35px] flex
-                     py-2 1350px:py-[6px] 300px:px-4 px-2 border border-transparent text-sm 1350px:text-[13px] font-medium rounded-md text-white
-                     bg-red-600 hover:bg-red-700 ">Continue with <span className="absolute 300px:right-3 right-1
-                     300px:top-2 top-[10px] items-center"><FcGoogle className="300px:text-[18px] text-[15px] 1350px:text-[14px]"/></span></button>
+                     <button type="submit" className=" relative 768px:w-[180px] 1350px:w-[130px] 
+                     w-[122px] 300px:w-[155px] h-[40px] 1350px:h-[32px] flex
+                     py-2 1350px:py-[6px] 300px:px-4 px-2 border border-transparent text-sm 1350px:text-[10px] font-medium rounded-md text-white
+                     bg-[#d34836] hover:bg-[#d34836ea]">Continue with <span className="absolute 300px:right-3 right-1
+                     300px:top-2 top-[10px] items-center"><FcGoogle className="300px:text-[18px] text-[15px] 1350px:text-[12px]"/></span></button>
                 </div>
                 <div>
-                <button type="submit" className=" relative 768px:w-[180px] 1350px:w-[150px]
-                w-[122px] 300px:w-[155px] h-[40px] 1350px:h-[35px] flex
-                     py-2 1350px:py-[6px] 300px:px-4 px-2 border border-transparent text-sm 1350px:text-[13px] font-medium rounded-md text-white
-                     bg-blue-600 hover:bg-blue-700 ">Continue with <span className="absolute 300px:right-3 right-1
-                     300px:top-2 top-[10px] items-center "><FaFacebookSquare className="300px:text-[18px] text-[15px] 1350px:text-[14px]"/></span></button>
+                <button type="submit" className=" relative 768px:w-[180px] 1350px:w-[130px]
+                w-[122px] 300px:w-[155px] h-[40px] 1350px:h-[32px] flex
+                     py-2 1350px:py-[6px] 300px:px-4 px-2 border border-transparent text-sm 1350px:text-[10px] font-medium rounded-md text-white
+                     bg-[#3b5998] hover:bg-[#3b5898e8] ">Continue with <span className="absolute 300px:right-3 right-1
+                     300px:top-2 top-[10px] items-center "><FaFacebookSquare className="300px:text-[18px] text-[15px] 1350px:text-[12px]"/></span></button>
                 </div>
             </div>
             <div>
-                    <button type="submit" className="group relative w-full h-[40px] 1350px:h-[35px] flex justify-center 
-                    py-2 1350px:py-[6px] px-4 border border-transparent text-md 1350px:text-[13px] font-medium rounded-md text-white
-                    bg-blue-600 hover:bg-blue-700 ">Sing In</button>
+                    <button type="submit" className="group relative w-full h-[40px] 1350px:h-[32px] flex justify-center 
+                    py-2 1350px:py-[6px] px-4 border border-transparent text-md 1350px:text-[12px] font-medium rounded-md text-white
+                    bg-[#f57224] hover:bg-[#d37742] ">Sing Up</button>
                 </div>
                 <div className={`${styles.normal_flex} w-full`}>
-                    <h4 className='1350px:text-[13px]'>Already have an acccount?</h4>
-                    <Link to="/login" className="text-blue-600 pl-2 1350px:text-[13px]">
+                    <h4 className='1350px:text-[12px]'>Already have an acccount?</h4>
+                    <Link to="/login" className="text-blue-600 pl-2 1350px:text-[12px]">
                         Login
                     </Link>
                 </div>

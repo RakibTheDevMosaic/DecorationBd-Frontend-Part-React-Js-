@@ -51,14 +51,14 @@ const ProfileContent = ({ active }) => {
           1500px:pl-0 ml-0">
             <div className="flex items-center gap-[15px]">
               <CgProfile  color="#242424" className="text-[28px] 1350px:text-[26px]"/>
-              <span className="text-[#077bc4] font-bold text-[18px] 1350px:text-[16px]">
+              <span className="text-[#077bc4] font-[600] text-[18px] 1350px:text-[16px]">
                 Welcome!
               </span>
             </div>
             <div>
               <h2
                 className="text-[#242424] capitalize 
-                   font-bold ml-[25px] mt-[2px] text-[20px] 1350px:text-[18px]"
+                   font-[600] ml-[25px] mt-[2px] text-[20px] 1350px:text-[18px]"
               >
                 the dev mosaic
               </h2>
@@ -68,38 +68,38 @@ const ProfileContent = ({ active }) => {
           </div>
           <div className="w-full px-4 1500px:ml-[50px] 300px:pl-[20px] 1024px:pl-[80px] 1500px:pl-0 ml-0">
             <form>
-              <div className="w-full flex flex-col pb-3  768px:gap-[15px] 300px:gap-[10px]">
+              <div className="w-full flex flex-col pb-3  768px:gap-[10px] 300px:gap-[10px]">
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1350px:text-[13px]">First Name :</label>
+                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">First Name :</label>
                   <input
                     type="text"
-                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px]`}
+                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
                     required
                   />
                 </div>
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1350px:text-[13px]">Last Name :</label>
+                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">Last Name :</label>
                   <input
                     type="text"
-                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px]`}
+                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
                     required
                   />
                 </div>
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1350px:text-[13px]">UserName :</label>
+                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">UserName :</label>
                   <input
                     type="text"
-                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px]`}
+                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
                     required
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                   />
                 </div>
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1350px:text-[13px]">Email :</label>
+                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">Email :</label>
                   <input
                     type="email"
-                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px]`}
+                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -107,9 +107,9 @@ const ProfileContent = ({ active }) => {
                 </div>
                 <button
                   type="submit"
-                  className="mt-[10px] 1350px:mt-[5px]
+                  className="mt-[10px] 1024px:mt-[5px] 1350px:p-[5px]
                     768px:p-2 p-1 border bg-[#077bc4] text-white 
-                    1280px:text-[18px] 1024px:text-[16px] text-[16px] 1350px:text-[13px] font-bold 1024px:w-[15%] 768px:w-[20%] 300px:w-[50%] rounded-md"
+                    1280px:text-[18px] 1024px:text-[16px] text-[16px] 1350px:text-[13px] font-semibold 1350px:w-[12%] 1024px:w-[15%] 768px:w-[20%] 300px:w-[50%] rounded-md"
                 >
                   Save Changes
                 </button>
@@ -159,87 +159,101 @@ const ProfileContent = ({ active }) => {
 
       {active === 4 &&
            (
-            <div className="1024px:pl-8 768px:pl-2 pl-1 pt-3">
+            <div className="1024px:pl-8 768px:pl-2 pl-1 pt-3 1024px:pt-0">
               {
                 isForm ? (
                   <div className="">
                     {
                       billingAddressForm ? (
                         <div className="">
-                           <div className="pl-1 pt-3 1024px:w-[70%] w-[100%]">
+                           <div className="pl-1 pt-3 1024px:pt-0 1024px:w-[70%] w-[100%]">
                     <h1
                       className="768px:text-[28px] 1350px:text-[22px] text-[25px] text-[#242424] 
-                          font-semibold capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] ml-[8px]"
+                          font-semibold capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] "
                     >
                       billing address
                     </h1>
-                    <form className="mt-[20px] 768px:ml-[30px] ml-[10px]">
-                      <div className="w-full flex flex-col pb-3 768px:gap-[15px] gap-[10px]">
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]"> Name :</label>
+                    <form className="mt-[20px] 1024px:mt-[10px] 768px:ml-[30px] ml-[10px]">
+                      <div className="w-full flex flex-col pb-3 768px:gap-[10px] gap-[10px]">
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Name :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]"> Email :</label>
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Email :</label>
                           <input
                             type="email"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Phone :</label>
+
+                          <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Phone :</label>
                           <input
                             type="number"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Address :</label>
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Address :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Town / City :</label>
+                        </div>
+
+                         <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Town / City :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">
                             Postcode / ZIP (optional) :
                           </label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Country :</label>
+                        </div>
+
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Country :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
                         <button
                           type="submit"
-                          className="mt-[10px]
+                          className="mt-[10px] 1024px:mt-[5px]
                       p-2 border bg-[#077bc4] text-white 1350px:text-[13px]
-                      1024px:text-[18px] 768px:text-[17px] text-[16px] font-bold 1024px:w-[15%] 768px:w-[25%] w-[50%] rounded-md"
+                      1024px:text-[16px] 768px:text-[17px] text-[16px] font-[600] 1350px:w-[15%] 1024px:w-[25%] 768px:w-[25%] w-[50%] rounded-md"
                           onClick={() => {
                             setIsForm(false);
                             setBillingAddressForm(false);
@@ -257,84 +271,98 @@ const ProfileContent = ({ active }) => {
                     {
                       shippingForm ? (
                         <div className="">
-                              <div className="pl-1 pt-3 1024px:w-[70%] w-[100%]">
+                              <div className="pl-1 pt-3 1024px:pt-0 1024px:w-[70%] w-[100%]">
                   <h1
                 className="768px:text-[28px] 1350px:text-[22px] text-[25px] text-[#242424] 
                     font-semibold capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] ml-[8px]"
               >
                 Shipping address
               </h1>
-              <form className="mt-[20px] 768px:ml-[30px] ml-[10px]">
-                      <div className="w-full flex flex-col pb-3 768px:gap-[15px] gap-[10px]">
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]"> Name :</label>
+              <form className="mt-[20px] 1024px:mt-[10px] 768px:ml-[30px] ml-[10px]">
+                      <div className="w-full flex flex-col pb-3 768px:gap-[10px] gap-[10px]">
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Name :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]"> Email :</label>
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Email :</label>
                           <input
                             type="email"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Phone :</label>
+
+                          <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Phone :</label>
                           <input
                             type="number"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Address :</label>
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Address :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Town / City :</label>
+                        </div>
+
+                         <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Town / City :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">
+                        <div className="w-[49%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">
                             Postcode / ZIP (optional) :
                           </label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
-                        <div className="1280px:w-[50%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1350px:text-[13px]">Country :</label>
+                        </div>
+
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Country :</label>
                           <input
                             type="text"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]`}
+                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                            border-[1px] border-[rgba(0,0,0,0.3)]`}
                             required
                           />
                         </div>
                         <button
                           type="submit"
-                          className="mt-[10px]
+                          className="mt-[10px] 1024px:mt-[5px]
                       p-2 border bg-[#077bc4] text-white 1350px:text-[13px]
-                      1024px:text-[18px] 768px:text-[17px] text-[16px] font-bold 1024px:w-[15%] 768px:w-[25%] w-[50%] rounded-md"
+                      1024px:text-[16px] 768px:text-[17px] text-[16px] font-[600] 1350px:w-[15%] 1024px:w-[25%] 768px:w-[25%] w-[50%] rounded-md"
                           onClick={() => {
                             setIsForm(false);
                             setBillingAddressForm(false);
-                            setBillingAddress(false);
+                            setShippingAddress(false);
                           }}
                         >
                           Save Address
@@ -576,97 +604,98 @@ const ProfileContent = ({ active }) => {
            )
        }
       {active === 5 && (
-        <div className="1280px:pl-14 768px:pl-6 pl-[5px] pt-3 w-full">
-          <div className="bg-white 1280px:w-[63%] 1350px:w-[60%] 768px:w-[90%] w-[99.5%]
+        <div className="1280px:pl-14 768px:pl-6 pl-[5px] pt-3 1024px:pt-0 w-full">
+          <div className="bg-white 1280px:w-[63%] 1350px:w-[45%] 768px:w-[90%] 1024px:w-[80%] w-[99.5%]
            py-2 px-3 rounded-sm shadow-md  shadow-[#077bc4]">
             <div className="flex items-center text-[#077bc4]">
-              <RiAccountBoxLine  className="pr-[5px] text-[35px]" />
+              <RiAccountBoxLine  className="pr-[5px] text-[35px] 1350px:text-[25px]" />
               <h1
-                className="text-[22px] 1350px:text-[20px]
+                className="text-[22px] 1350px:text-[14px]
                     font-semibold capitalize px-[5px] pt-[5px]"
               >
                 account details
               </h1>
             </div>
             <div
-              className="w-full overflow-hidden pt-[10px] 
-                                1280px:px-[25px] 768px:px-[15px] px-[5px] pb-[15px] flex flex-col justify-center gap-[10px]"
+              className="w-full overflow-hidden  
+                                1280px:px-[25px] 768px:px-[15px] px-[5px] pb-[15px] 1024px:pb-[5px] flex flex-col justify-center gap-[1px]"
             >
               <h3
-                className="768px:text-[19px] 1350px:text-[15px] text-[18px] font-semibold
+                className="768px:text-[19px] 1350px:text-[13px] text-[18px] font-[500]
                                      text-[#242424]"
               >
                 Name :{" "}
-                <span className="768px:text-[17px] 1350px:text-[14px] text-[16px] italic ml-[5px]">
+                <span className="768px:text-[17px] 1350px:text-[12px] text-[16px] italic ml-[5px]">
                   {address.name}
                 </span>
               </h3>
               <h3
-                className="768px:text-[19px] 1350px:text-[15px] text-[18px] font-semibold
+                className="768px:text-[19px] 1350px:text-[13px] text-[18px] font-[500]
                                      text-[#242424]"
               >
                 Email :{" "}
-                <span className="768px:text-[17px] 1350px:text-[14px] text-[16px] italic 768px:ml-[5px] ml-[1px]">
+                <span className="768px:text-[17px] 1350px:text-[12px] text-[16px] italic 768px:ml-[5px] ml-[1px]">
                   {address.email}
                 </span>
               </h3>
               <h3
-                className="768px:text-[19px] 1350px:text-[15px] text-[18px] font-semibold
+                className="768px:text-[19px] 1350px:text-[13px] text-[18px] font-[500]
                                      text-[#242424]"
               >
                 User Name :{" "}
-                <span className="768px:text-[17px] 1350px:text-[14px] text-[16px] italic ml-[5px]">{userName}</span>
+                <span className="768px:text-[17px] 1350px:text-[12px] text-[16px] italic ml-[5px]">{userName}</span>
               </h3>
               <h3
-                className="768px:text-[19px] 1350px:text-[15px] text-[18px] font-semibold
+                className="768px:text-[19px] 1350px:text-[13px] text-[18px] font-[500]
                                      text-[#242424]"
               >
                 Address :{" "}
-                <span className="768px:text-[17px] 1350px:text-[14px] text-[16px] italic ml-[5px]">
+                <span className="768px:text-[17px] 1350px:text-[12px] text-[16px] italic ml-[5px]">
                   {address.address}
                 </span>
               </h3>
               <h3
-                className="768px:text-[19px] 1350px:text-[15px] text-[18px] font-semibold
+                className="768px:text-[19px] 1350px:text-[13px] text-[18px] font-[500]
                                      text-[#242424]"
               >
                 City :{" "}
-                <span className="768px:text-[17px] 1350px:text-[14px] text-[16px] italic ml-[5px]">
+                <span className="768px:text-[17px] 1350px:text-[12px] text-[16px] italic ml-[5px]">
                   {address.city}
                 </span>
               </h3>
               <h3
-                className="768px:text-[19px] 1350px:text-[15px] text-[18px] font-semibold
+                className="768px:text-[19px] 1350px:text-[13px] text-[18px] font-[500]
                                      text-[#242424]"
               >
                 Phone Number :{" "}
-                <span className="768px:text-[17px] 1350px:text-[14px] text-[16px] italic ml-[5px]">
+                <span className="768px:text-[17px] 1350px:text-[12px] text-[16px] italic ml-[5px]">
                   {address.Pnum}
                 </span>
               </h3>
             </div>
-            <h4 className="pt-[20px] 768px:text-[18px] 1350px:text-[14px] text-[15px] font-semibold 
-            768px:pl-[10px] pl-[5px] capitalize pb-[20px]">
+            <h4 className="pt-[20px] 1024px:pt-[5px] 768px:text-[18px] 1280px:text-[14px] 1350px:text-[10px] text-[15px] font-[500] 
+            768px:pl-[10px] pl-[5px] capitalize pb-[20px] 1024px:pb-[5px]">
               <span className="text-[orangered] ">
-                if you wish to change your <span className="text-[red]">password <MdOutlineKey  className="inline 768px:text-[20px] 1350px:text-[15px] text-[17px]"/> 
+                if you wish to change your <span className="text-[red]">password <MdOutlineKey  className="inline 768px:text-[20px] 1350px:text-[12px] text-[17px]"/> 
                 </span>
               </span>
               , <span className="text-[orange]"> please follow the instructions below</span>
             </h4>
-            <div className="pt-[20px]">
+            <div className="pt-[20px] 1024px:pt-[5px]">
                 <div className="flex items-center gap-[10px] 768px:pl-[10px] pl-[5px]">
-                    <RiLockPasswordLine  className="text-[#077bc4] tex-[25px] 1350px:text-[22px]"/>
-                    <h1 className="text-[#077bc4] text-[22px] 1350px:text-[20px] capitalize
+                    <RiLockPasswordLine  className="text-[#077bc4] tex-[25px] 1350px:text-[16px]"/>
+                    <h1 className="text-[#077bc4] text-[22px] 1350px:text-[14px] capitalize
                     pt-[5px] font-semibold">change password</h1>
                 </div>
-                <div className="768px:pt-[30px] pt-[10px] 768px:pl-[20px] pl-[5px] 1024px:w-[60%] 768px:w-[80%] w-[100%] pb-[3px]">
+                <div className="768px:pt-[30px] 1024px:pt-[5px] pt-[10px] 768px:pl-[20px] pl-[5px] 1024px:w-[60%] 768px:w-[80%] w-[100%] 
+                pb-[3px] 1350px:pb-0">
               <label
                 htmlFor="password"
-                className="block font-medium text-[#242424] 1350px:text-[14px]"
+                className="block font-medium text-[#242424] 1350px:text-[11px]"
               >
                 Current Password :
               </label>
-              <div className="mt-1 relative w-full">
+              <div className="mt-1 1024px:mt-0 relative w-full">
                 <input
                   type={visible?"text":"password"}
                   name="password"
@@ -675,29 +704,30 @@ const ProfileContent = ({ active }) => {
                   placeholder="Enter current password***"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block !w-[100%] px-3 py-2 1350px:py-[6px] border border-gray-300 rounded-md 
-                  shadow-sm placeholder-gray-500 1350px:text-[13px]
+                  className="appearance-none block !w-[100%] px-3 py-2 1350px:py-[3px] border border-gray-300 rounded-md 
+                  shadow-sm placeholder-gray-500 1350px:text-[10px]
                   focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
                 {visible? <AiOutlineEye 
                 
-                className="absolute right-3 top-2 cursor-pointer 1350px:text-[18px] text-[22px] text-gray-500"
+                className="absolute right-3 top-2 cursor-pointer 1350px:text-[13px] text-[22px] text-gray-500"
                 onClick={()=>setVisible(false)} 
                 />  : <AiOutlineEyeInvisible 
                 
-                className="absolute right-3 top-2 1350px:text-[18px] text-[22px] cursor-pointer text-gray-500"
+                className="absolute right-3 top-2 1350px:text-[13px] text-[22px] cursor-pointer text-gray-500"
                 onClick={()=>setVisible(true)} 
                 />}
               </div>
             </div>
-                <div className="768px:pt-[30px] pt-[10px] 768px:pl-[20px] pl-[5px] 1024px:w-[60%] 768px:w-[80%] w-[100%] pb-[3px]">
+                <div className="768px:pt-[30px] 1024px:pt-[5px] pt-[10px] 768px:pl-[20px] pl-[5px] 1024px:w-[60%] 768px:w-[80%] w-[100%] 
+                pb-[3px] 1350px:pb-0">
               <label
                 htmlFor="password1"
-                className="block font-medium text-[#242424] 1350px:text-[14px]"
+                className="block font-medium text-[#242424] 1350px:text-[11px]"
               >
                 New Password :
               </label>
-              <div className="mt-1 relative w-full">
+              <div className="mt-1 1024px:mt-0 relative w-full">
                 <input
                   type={visible1?"text":"password"}
                   name="password1"
@@ -706,29 +736,30 @@ const ProfileContent = ({ active }) => {
                   placeholder="Enter new password***"
                   value={password1}
                   onChange={(e) => setPassword1(e.target.value)}
-                  className="appearance-none block !w-[100%] px-3 py-2 1350px:py-[6px] border border-gray-300 rounded-md 
-                  shadow-sm placeholder-gray-500 1350px:text-[13px]
+                  className="appearance-none block !w-[100%] px-3 py-2 1350px:py-[3px] border border-gray-300 rounded-md 
+                  shadow-sm placeholder-gray-500 1350px:text-[10px]
                   focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
                 {visible1? <AiOutlineEye 
                 
-                className="absolute right-3 top-2 1350px:text-[18px] text-[22px] cursor-pointer text-gray-500"
+                className="absolute right-3 top-2 1350px:text-[13px] text-[22px] cursor-pointer text-gray-500"
                 onClick={()=>setVisible1(false)} 
                 />  : <AiOutlineEyeInvisible 
                 
-                className="absolute right-3 top-2 1350px:text-[18px] text-[22px] cursor-pointer text-gray-500"
+                className="absolute right-3 top-2 1350px:text-[13px] text-[22px] cursor-pointer text-gray-500"
                 onClick={()=>setVisible1(true)} 
                 />}
               </div>
             </div>
-                <div className="768px:pt-[30px] pt-[10px] 768px:pl-[20px] pl-[5px] 1024px:w-[60%] 768px:w-[80%] w-[100%] pb-[20px]">
+                <div className="768px:pt-[30px] 1024px:pt-[5px] pt-[10px] 768px:pl-[20px] pl-[5px] 1024px:w-[60%] 768px:w-[80%] w-[100%] 
+                pb-[20px] 1280px:pb-[10px] 1350px:pb-[5px]">
               <label
                 htmlFor="password2"
-                className="block font-medium text-[#242424] 1350px:text-[14px]"
+                className="block font-medium text-[#242424] 1350px:text-[11px]"
               >
                 Confirm Password :
               </label>
-              <div className="mt-1 relative w-full">
+              <div className="mt-1 1024px:mt-0 relative w-full">
                 <input
                   type={visible2?"text":"password"}
                   name="password2"
@@ -737,26 +768,26 @@ const ProfileContent = ({ active }) => {
                   placeholder="Confirm new password***"
                   value={password2}
                   onChange={(e) => setPassword2(e.target.value)}
-                  className="appearance-none block !w-[100%] px-3 py-2 1350px:py-[6px] border border-gray-300 rounded-md 
-                  shadow-sm placeholder-gray-500 1350px:text-[13px]
+                  className="appearance-none block !w-[100%] px-3 py-2 1350px:py-[3px] border border-gray-300 rounded-md 
+                  shadow-sm placeholder-gray-500 1350px:text-[10px]
                   focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
                 {visible2? <AiOutlineEye 
                 
-                className="absolute right-3 top-2 1350px:text-[18px] text-[22px] cursor-pointer text-gray-500"
+                className="absolute right-3 top-2 1350px:text-[13px] text-[22px] cursor-pointer text-gray-500"
                 onClick={()=>setVisible2(false)} 
                 />  : <AiOutlineEyeInvisible 
                 
-                className="absolute right-3 top-2  1350px:text-[18px] text-[22px] cursor-pointer text-gray-500"
+                className="absolute right-3 top-2  1350px:text-[13px] text-[22px] cursor-pointer text-gray-500"
                 onClick={()=>setVisible2(true)} 
                 />}
               </div>
             </div>
             <button
                     type="submit"
-                    className="mt-[10px] mb-[20px] 768px:ml-[20px] ml-[10px] capitalize
-                py-2 768px:px-[12px] 1350px:text-[13px] px-[6px] border bg-[orangered] text-white 
-                768px:text-[17px] text-[16px] font-bold 1500px:w-[25%] 1024px:w-[30%] 768px:w-[35%] w-[55%] rounded-md">
+                    className="mt-[10px] 1024px:mt-0 mb-[20px] 1024px:mb-[5px] 1350px:mb-0 768px:ml-[20px] ml-[10px] capitalize
+                py-2 1024px:py-[4px] 768px:px-[12px] 1350px:text-[12px] px-[6px] border bg-[orangered] text-white 
+                768px:text-[17px] text-[16px] font-[500] 1500px:w-[25%] 1024px:w-[30%] 768px:w-[35%] w-[55%] rounded-md">
                     change password
                   </button>
             </div>

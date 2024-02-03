@@ -15,42 +15,22 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div className={`footerSection`}>
-      <div className="newsletterWrapper">
-      <div className="newletterPart">
-        <div className="text">be in touch with us :</div>
-        <div className="inputEmail">
-          <input type="text" placeholder="Enter your e-mail" className="1350px:text-[12px] 1024px:text-[13px]"/>
-          <button>join us</button>
-        </div>
-        <div className="socialIcons">
-          <a href="#">
-            <FaFacebookF />
-          </a>
-          <a href="#">
-            <FaInstagram />
-          </a>
-          <a href="#">
-            <FaTwitter />
-          </a>
-          <a href="#">
-            <FaYoutube />
-          </a>
-          <a href="#">
-            <FaPinterestP />
-          </a>
-        </div>
-      </div>
-      </div>
 
-       <div className="w-full bg-[#0a0a0a]">
+        
+        {/*  */}
+      
+      
+
+      
       <div
-        className="others grid grid-cols-1 md:grid-cols-2
-      lg:grid-cols-4 xl:grid-cols-4 mx-auto "
+        className="others flex 768px:items-center 300px:flex-col 300px:justify-center 
+        768px:flex-row 768px:gap-[10px] 300px:w-[100%] h-[100%] 1024px:w-[90%] 1024px:h-[100%]
+        1350px:w-[85%] 1350px:h-[80%] mx-auto "
       >
-        <div className="footerImg">
+        <div className="footerImg ">
           <div>
-            <img src={logo} alt="" className="800px:rounded-[26px] rounded-[10px] 
-             800px:mb-[18px] 800px:pb-[2px] mb-[5px] pb-0"/>
+            <img src={logo} alt="" className="1350px:w-[200px] 1350px:h-[200px] 
+            300px:w-[170px] 300px:h-[170px] 300px:ml-[130px] 768px:ml-0 object-contain "/>
           </div>
      
         </div>
@@ -73,7 +53,7 @@ const Footer = () => {
             <div>Terms & Conditions</div>
           </div>
         </div>
-        <div className="contact">
+        <div className="contact 1350px:mb-[20px]">
           <div className="title">Contact Us</div>
           <div className="item">
             <FaMobile />
@@ -81,12 +61,31 @@ const Footer = () => {
           </div>
           <div className="item">
             <FaEnvelope />
-            <span>Email: mnhodarajib@gmail.com</span>
+            <span> mnhodarajib@gmail.com</span>
+          </div>
+          <div className="item ">
+      
+          <a href="#" className="1350px:text-[14px] ">
+            <FaFacebookF />
+          </a>
+          <a href="#" className="1350px:text-[14px] ">
+            <FaInstagram />
+          </a>
+          <a href="#" className="1350px:text-[14px] ">
+            <FaTwitter />
+          </a>
+          <a href="#" className="1350px:text-[14px] ">
+            <FaYoutube />
+          </a>
+          <a href="#" className="1350px:text-[14px] ">
+            <FaPinterestP />
+          </a>
+        
           </div>
         </div>
       </div>
-      </div>
-      <div className="w-full bg-[#0a0a0a] h-[10%]">
+      
+      <div className="w-full bg-[#000000] h-[10%]">
         <div className="1350px:w-[88%] 1280px:w-[90%] 768px:w-[90%] w-[100%] bg-[#27292c] justify-center mx-auto rounded-sm
         text-[13px] h-[50px] text-[#d4d5d5] font-[600] flex items-center">all rights reserved © 2020 - 2024 decorationbd.com ​</div>
       </div>

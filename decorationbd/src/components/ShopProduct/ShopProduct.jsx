@@ -10,7 +10,7 @@ const ShopProduct = ({data,open,setOpen}) => {
     const d = data.name;
     const product_name = d.replace(/\s+/g,"-");
   return (
-    <div className='w-full h-[480px] 1350px:h-[380px] bg-white rounded-md card-container4
+    <div className='w-full h-[480px] 1350px:h-[350px] bg-white rounded-md card-container4
     shadow-xl 768px:p-3 1280px:p-[2px]  p-[2px] relative cursor-pointer'>
       <div className="flex justify-end">
         </div>
@@ -19,7 +19,7 @@ const ShopProduct = ({data,open,setOpen}) => {
             <Link to={`/product/${product_name}`}>
             <img src={data.image_Url[0].url} alt="" className='768px:w-[94%] 1280px:w-[98%]  w-[98%] img
             mx-auto 768px:mt-[5px] 1280px:mt-[2px]  mt-[2px] 768px:mb-[5px]
-            1280px:mb-[2px]  mb-[2px] h-[245px] 1350px:h-[185px] object-cover'/>
+            1280px:mb-[2px]  mb-[2px] h-[245px] 1350px:h-[170px] object-cover'/>
              </Link>
              <span className='quickView4'><IoIosSearch size={16} title='Quick View'
             onClick={()=>setOpen(!open)}/></span>

@@ -197,7 +197,7 @@ const Header = ({dropDown,setDropDown}) => {
           {
             dropDown? (
               <div className={`absolute top-[58px] left-[20px] dropDown`}>
-                <DropDown/>
+                <DropDown setDropDown={setDropDown}/>
               </div>
             ):null
           }
@@ -209,12 +209,6 @@ const Header = ({dropDown,setDropDown}) => {
          {
             openCart?(
               <CartPopup setOpencart={setOpencart}/>
-            ):null
-          }
-         {/* wishlist popup */}
-         {
-            openWishlist?(
-              <WishListPopup setOpenWishlist={setOpenWishlist}/>
             ):null
           }
         </div>
