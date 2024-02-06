@@ -32,7 +32,7 @@ const CartPage = () => {
   ]
   return (
     <div className={` 1350px:w-[88%] 1280px:w-[95%] 1024px:w-[94%] w-[99%] mx-auto`}>
-      <div className="flex items-center flex-col 1280px:flex-row w-full 1280px:mt-[50px] 1350px:mt-[30px]
+      <div className="flex items-center flex-col 1280px:flex-row w-full 1280px:mt-[50px] 1350px:mt-[30px] 1280px:justify-center
        mt-[100px] gap-[20px]">
       <div className="1500px:w-[56%] 1024px:w-[90%] 1280px:w-[60%]  w-[100%] overflow-hidden">
         

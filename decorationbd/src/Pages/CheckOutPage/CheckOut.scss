@@ -69,3 +69,14 @@
         transition: all 1s ease;
     }
 }
+.closeFullPayment{
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 1s ease;
+}
+.openFullPayment{
+    opacity: 1;
+    max-height: 300px;
+    transition: all 1s ease;
+}

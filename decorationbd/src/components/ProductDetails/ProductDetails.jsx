@@ -20,7 +20,7 @@ const ProductDetails = ({
       {data ? (
         <div className={`${Styles.section} w-[95%] 768px:w-[90%]  1024px:w-[80%] mt-[70px] 768px:mt-[100px] lg:mt-0`}>
           <div className="w-full py-5 1350px:py-2">
-            <div className="block w-full 1024px:flex">
+            <div className="block w-full 1024px:flex ">
               <div className="w-full 1024px:w-[650px] 1024px:mr-[30px]">
              
                   <img

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {RxCross1} from "react-icons/rx";
 import styles from "../../Styles/Styles"
 import {AiOutlineShoppingCart} from "react-icons/ai"
@@ -8,7 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 // import {productData} from "../../Static/Data"
-const QuickView = ({data,setOpen}) => {
+const QuickView = ({data,setOpen,open}) => {
     // const [click ,setClick]= useState(false);
     // const [select,setSelect] = useState(false);
     const [selectedImg,setSelectedImg] = useState(data.image_Url[0]);
@@ -22,6 +22,38 @@ const QuickView = ({data,setOpen}) => {
     const incrementQuantity = () => {
       setCount(count + 1);
     };
+  
+
+    // useEffect(() => {
+    //   const handleClickOutside = (event) => {
+    //     if (open && !event.target.classList.contains('quickViewclose')) {
+    //       setOpen(false);
+    //     }
+    //   };
+    
+    //   if (open) {
+    //     window.addEventListener('click', handleClickOutside);
+    //   }
+    
+    //   return () => {
+    //     window.removeEventListener('click', handleClickOutside);
+    //   };
+    // }, [open]);
+
+    // useEffect(() => {
+    //   const handleClick = (event) => {
+    //     if (!event.target.classList.contains('quickViewclose') && !event.target.closest('.quickViewclose')) {
+    //       setOpen(false);
+    //     }
+    //   };
+  
+    //   document.addEventListener('click', handleClick);
+  
+    //   return () => {
+    //     document.removeEventListener('click', handleClick);
+    //   };
+    // }, []);
+  
 
   return (
     <div className='bg-[#fff]'>
@@ -31,7 +63,7 @@ const QuickView = ({data,setOpen}) => {
         justify-center">
             <div className="relative w-[90%] 768px:w-[60%] 
             h-[90vh] overflow-y-scroll 768px:h-[75vh] 
-            bg-white rounded-md shadow-md p-4">
+            bg-white rounded-md shadow-md p-4 quickViewclose">
                 <RxCross1 size={25} className="absolute right-3 top-3 z-50" 
                 onClick={()=>setOpen(false)}/>
 

@@ -7,7 +7,9 @@ import { FiChevronDown } from "react-icons/fi";
 import { GoPlus } from "react-icons/go";
 import { BiSolidDiscount } from "react-icons/bi";
 import { IoIosArrowForward } from "react-icons/io";
-
+import nogod from "../../Assets/img/CheckOut/nogod.png";
+import rocket from "../../Assets/img/CheckOut/rocket.png";
+import credit from "../../Assets/img/CheckOut/credit.jpg";
 
 const CheckOutPage = () => {
     const [coupon,setCoupon] = useState(false);
@@ -62,8 +64,9 @@ const CheckOutPage = () => {
      const [otherShippAdd,setOtherShippAdd] = useState(false)
      const [shipping,setShipping] = useState(shippAdd1[0]);
      const [selected,setSelected] = useState(true)
+     const [fullPayment,setFullPayment] = useState(true);
   return (
-    <div className={`1350px:w-[84%] 1024px:w-[70%] 1280px:w-[95%] w-[98%] mx-auto flex flex-col 1280px:flex-row items-center gap-[30px]`}>
+    <div className={`1350px:w-[84%] 1024px:w-[70%] 1280px:w-[95%] w-[98%] mx-auto flex flex-col 1280px:flex-row items-center justify-center gap-[20px]`}>
       <div className="1280px:w-[50%] w-[100%] px-2 py-2 1350px:py-1 1280px:mr-[50px] 1350px:mr-[20px] mr-0">
    
         <div className="w-full 1350px:w-[86%] 768px:p-[15px] p-[5px] mt-[50px] 300px:mt-[80px] 1280px:mt-[5px] 
@@ -142,7 +145,8 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
+            <div className='flex items-center 768px:w-[86%] 1024px:w-[88%] 1350px:w-[89%] 1280px:w-[90%] mx-auto'>
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Email :</label>
                 <input
                   type="email"
@@ -153,8 +157,7 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className='flex items-center 768px:w-[86%] 1024px:w-[88%] 1350px:w-[89%] 1280px:w-[90%] mx-auto'>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 1280px:ml-[5px] 1350px:ml-0">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Phone :</label>
                 <input
                   type="number"
@@ -165,20 +168,21 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px]  1280px:ml-[5px] 1350px:ml-0">
+            </div>
+
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Address :</label>
-                <input
-                  type="text"
-                  placeholder='*** Enter your address'
-                  className={`px-[10px] py-[8px] 1350px:py-[4px]  1350px:text-[11px]
-                  rounded-[50px] outline-none border border-[gray] !w-[90%]`}
-                  value={''}
-                  required
+                <textarea
+                  placeholder='Enter your address'
+                  rows={3}
+                  cols={10}
+                  className='1350px:text-[10px] border border-[gray] w-[90%]'
                 />
             </div>
-            </div>
+
+        
             <div className='flex items-center 768px:w-[86%] 1024px:w-[88%] 1350px:w-[89%] 1280px:w-[90%] mx-auto'>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Town / City :</label>
                 <input
                   type="text"
@@ -189,7 +193,7 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px]  1280px:ml-[5px] 1350px:ml-0">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 1280px:ml-[5px] 1350px:ml-0">
                 <label className="block pb-2 1350px:pb-[3px] 300px:text-[14px] 1350px:text-[12px]"> Postcode / ZIP (optional) :</label>
                 <input
                   type="number"
@@ -200,8 +204,8 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
+            </div> 
+            <div className="768px:w-[90%] w-[100%] 1350px:mt-[5px] mt-[10px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Customization :</label>
                 <textarea
                   placeholder='Enter your text'
@@ -221,7 +225,7 @@ const CheckOutPage = () => {
                 </>
               ):(
                 <>
-                             <div className="768px:w-[90%] w-[100%] mt-[20px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
+            <div className="768px:w-[90%] w-[100%] mt-[20px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Name :</label>
                 <input
                   type="text"
@@ -232,7 +236,8 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
+            <div className='flex items-center 768px:w-[86%] 1024px:w-[88%] 1350px:w-[89%] 1280px:w-[90%] mx-auto'>
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Email :</label>
                 <input
                   type="email"
@@ -243,8 +248,7 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className='flex items-center 768px:w-[86%] 1024px:w-[88%] 1350px:w-[89%] 1280px:w-[90%] mx-auto'>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 1280px:ml-[5px] 1350px:ml-0">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Phone :</label>
                 <input
                   type="number"
@@ -255,20 +259,21 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px]  1280px:ml-[5px] 1350px:ml-0">
+            </div>   
+
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Address :</label>
-                <input
-                  type="text"
-                  placeholder='*** Enter your address'
-                  className={`px-[10px] py-[8px] 1350px:py-[4px]  1350px:text-[11px]
-                  rounded-[50px] outline-none border border-[gray] !w-[90%]`}
+                <textarea
+                  placeholder='Enter your text'
+                  rows={3}
+                  cols={10}
                   value={shipping.address}
-                  required
+                  className='1350px:text-[10px] border border-[gray] w-[90%]'
                 />
             </div>
-            </div>
+ 
             <div className='flex items-center 768px:w-[86%] 1024px:w-[88%] 1350px:w-[89%] 1280px:w-[90%] mx-auto'>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-0 1024px:ml-[10px] 1280px:ml-[20px] 1350px:ml-[15px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Town / City :</label>
                 <input
                   type="text"
@@ -279,7 +284,7 @@ const CheckOutPage = () => {
                   required
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px]  1280px:ml-[5px] 1350px:ml-0">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 1280px:ml-[5px] 1350px:ml-0">
                 <label className="block pb-2 1350px:pb-[3px] 300px:text-[14px] 1350px:text-[12px]"> Postcode / ZIP (optional) :</label>
                 <input
                   type="number"
@@ -291,7 +296,7 @@ const CheckOutPage = () => {
                 />
             </div>
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] 300px:ml-[20px] 768px:ml-[50px] 1280px:ml-[50px] 1350px:ml-[40px]">
                 <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Customization :</label>
                 <textarea
                   placeholder='Enter your text'
@@ -300,7 +305,7 @@ const CheckOutPage = () => {
                   className='1350px:text-[10px] border border-[gray] w-[90%]'
                 />
             </div>
-            <div className="768px:w-[90%] w-[100%] mt-[10px] flex items-center gap-[10px] 300px:ml-[20px] 768px:ml-[50px]
+            <div className="768px:w-[90%] w-[100%] mt-[10px] 1350px:mt-[5px] flex items-center gap-[10px] 300px:ml-[20px] 768px:ml-[50px]
              1280px:ml-[50px] 1350px:ml-[40px] ">
               
                <label className="block pb-2 1350px:pb-[3px] 1350px:text-[12px]"> Country :</label>
@@ -330,7 +335,7 @@ const CheckOutPage = () => {
                 </div>
               </div>
               <div className={`${coupon?"openCoupon":"closeCoupon"} relative`}>
-                <input type="number" className='w-full px-[10px] py-[3px] 
+                <input type="text" className='w-full px-[10px] py-[3px] 
                 1350px:text-[13px] outline-none border border-[rgba(0,0,0,0.2)]'/>
                 <p className='1350px:text-[13px] absolute right-7 top-1 text-[#4882d9] cursor-pointer'>| Confirm</p>
               </div>
@@ -400,14 +405,33 @@ const CheckOutPage = () => {
                 text-[#f85606]'>December 23, 2023</span>
             </div>
         </div>
-
-          <div className="mt-[50px]  1280px:mt-0 py-4 1280px:py-1 px-4 1350px:px-3">
+            { fullPayment && 
+          <div className={`${fullPayment?"openFullPayment":"closeFullPayment"}`}>
+          <div className="mt-[50px] flex items-center gap-[5px] 1280px:mt-0 py-4 1280px:py-1 px-4 1350px:px-3">
   
-          <div className="flex items-center gap-[5px]">
-          <input type="checkbox" className='w-[18px] h-[18px] 1350px:w-[12px] 1350px:h-[12px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+          <div className="flex items-center ">
+          <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
            outline-none border border-[rgba(0,0,0,0.2)]' checked={paymentButton}
            onClick={()=>{setPaymentButton(!paymentButton);setPartialPaymentButton(false);setPartialCod(false)}}/>
-          <img src={bkash} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[80px] 1350px:h-[25px] mt-[20px] 1350px:mt-0'/> <span className='text-[18px] 1350px:text-[10px] text-[#f85606] font-[500] mt-[10px]  1350px:mt-0'>(* Pay with bKash)</span>
+          <img src={bkash} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[70px] 1350px:h-[20px] mt-[20px] 1350px:mt-0'/>
+          </div>
+          <div className="flex items-center ">
+          <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+           outline-none border border-[rgba(0,0,0,0.2)]' 
+           onClick={()=>{}} disabled/>
+          <img src={nogod} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[60px] 1350px:h-[15px] mt-[20px] 1350px:mt-0'/> 
+          </div>
+          <div className="flex items-center ">
+          <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+           outline-none border border-[rgba(0,0,0,0.2)]' 
+           onClick={()=>{}} disabled/>
+          <img src={rocket} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[50px] 1350px:h-[15px] mt-[20px] 1350px:mt-0'/> 
+          </div>
+          <div className="flex items-center">
+          <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+           outline-none border border-[rgba(0,0,0,0.2)]' 
+           onClick={()=>{}} disabled/>
+          <img src={credit} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[40px] 1350px:h-[25px] mt-[20px] 1350px:mt-0'/> 
           </div>
         </div>
           <div className={`${paymentButton?"openButton":"closeButton"} px-3 1350px:px-2 py-2 1280px:py-1 border-t border-[rgba(0,0,0,0.2)] 
@@ -416,21 +440,49 @@ const CheckOutPage = () => {
             <button className='w-[85%] h-[45px] 1350px:h-[30px] 1280px:w-[50%] bg-[#f85606] my-[20px] 1280px:my-[5px]
              text-white font-[500] rounded-[50px] uppercase 1280px:text-[14px] 1350px:text-[9px] text-center'>pay now (<span className=' font-semibold 1350px:text-[9px]'>
               {totalAmount.toFixed(2)}<strong>৳</strong></span>)</button>
-          </div>  
-
+          </div></div>  
+            }
         <div className=" py-4 1280px:py-0 768px:px-4 1350px:px-3 px-2">
 
            <div className="mt-[15px] 1350px:mt-0 768px:px-[2] px-0 py-2 1350px:py-[2px] flex items-center">
            <input type="checkbox" className='w-[18px]  h-[18px] 1350px:h-[12px] 1350px:w-[12px] cursor-pointer pt-[5px] mr-[10px] 
            outline-none border border-[rgba(0,0,0,0.2)]' checked={partialPaymentButton}
-           onClick={()=>{setPartialCod(!partialCod);setPartialPaymentButton(!partialPaymentButton);setPaymentButton(false)}}/>
+           onClick={()=>{setPartialCod(!partialCod);setPartialPaymentButton(!partialPaymentButton);setPaymentButton(false);
+            setFullPayment(!partialPaymentButton ? false : true)}}/>
            <label className='768px:text-[20px] 1280px:text-[14px] 1350px:text-[11px] text-[18px] text-[#242424] font-[500]'> CASH ON DELIVERY / PARTIAL COD {"  "}
            <span className='768px:text-[18px] 1280px:text-[12px] 1350px:text-[10px] text-[17px] font-[500] text-[#f85606]'>(*** for prevent fake order)</span></label>
            </div>
         </div>
 
-        <div className={`${partialPaymentButton?"openButton2":"closeButton2"} px-3 1350px:px-2 py-2 1350px:py-1 border-t border-[rgba(0,0,0,0.2)] 
+        <div className={`${partialPaymentButton?"openButton2":"closeButton2"} px-3 1350px:px-2 py-2 1350px:py-1 
           flex flex-col items-center overflow-hidden`}>
+                      <div className="mt-[5px] flex items-center gap-[5px] 1280px:mt-0 py-4 1280px:py-1 px-4 1350px:px-3 border-b border-[rgba(0,0,0,0.2)] ">
+  
+                <div className="flex items-center ">
+                <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+                outline-none border border-[rgba(0,0,0,0.2)]' checked={partialPaymentButton}
+                onClick={()=>{setPaymentButton(!partialPaymentButton);setPartialPaymentButton(false);setPartialCod(false)}}/>
+                <img src={bkash} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[70px] 1350px:h-[20px] mt-[20px] 1350px:mt-0'/>
+                </div>
+                <div className="flex items-center ">
+                <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+                outline-none border border-[rgba(0,0,0,0.2)]' 
+                onClick={()=>{}} disabled/>
+                <img src={nogod} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[60px] 1350px:h-[15px] mt-[20px] 1350px:mt-0'/> 
+                </div>
+                <div className="flex items-center ">
+                <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+                outline-none border border-[rgba(0,0,0,0.2)]' 
+                onClick={()=>{}} disabled/>
+                <img src={rocket} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[50px] 1350px:h-[15px] mt-[20px] 1350px:mt-0'/> 
+                </div>
+                <div className="flex items-center">
+                <input type="radio" className='w-[18px] h-[18px] 1350px:w-[10px] 1350px:h-[10px] cursor-pointer pt-[5px] mt-[20px] 1350px:mt-0
+                outline-none border border-[rgba(0,0,0,0.2)]' 
+                onClick={()=>{}} disabled/>
+                <img src={credit} alt="" className='object-contain w-[120px] h-[40px] 1350px:w-[40px] 1350px:h-[25px] mt-[20px] 1350px:mt-0'/> 
+                </div>
+              </div>
             <p className='font-[500] text-[18px] 1280px:text-[12px] 1350px:text-[9px] text-[#242424] ml-[20px] mt-[10px] 1350px:mt-[5px]'>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
             <button className='w-[85%] h-[45px] 1350px:h-[30px] 1280px:w-[50%] bg-[#f85606] my-[20px] 1280px:my-[5px]
              text-white font-[500] rounded-[50px] uppercase 1280px:text-[14px] 1350px:text-[9px] text-center'>pay now (<span className=' font-semibold 1350px:text-[9px]'>

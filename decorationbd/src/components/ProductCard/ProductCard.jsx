@@ -26,8 +26,9 @@ const ProductCard = ({data,open,setOpen,count,decrementQuantity,incrementQuantit
             <img src={data.image_Url[0].url} alt="" className='img 768px:w-[94%] w-[98%] 1024px:w-[98%] 1350px:w-[98%]
             mx-auto 768px:mt-[5px] 1024px:mt-[2px]  mt-[2px] 768px:h-[220px] 1280px:h-[200px] 300px:h-[220px] h-[170px] object-cover'/>
           </Link>
-            <span className='quickView'><IoIosSearch size={16} title='Quick View'
-            onClick={()=>setOpen(!open)}/></span>
+            <span className='quickView'
+            onClick={()=>setOpen(!open)}><IoIosSearch size={16} title='Quick View'
+            /></span>
             {open?(<QuickView open={open} setOpen={setOpen} data={data}/>):null}
         </div> 
         <Link to={`/product/${product_name}`}>

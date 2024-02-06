@@ -21,7 +21,7 @@ const AboutPage = () => {
     <div className="aboutSection">
       <div className="paragraphSection">
        <div className="allParas w-[100%] 300px:w-[98%] 1500px:w-11/12 1024px:w-[98%] 1280px:w-[96%]
-       grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+       grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 ">
        <div className="para1">
           <div className="smallTxt">SOME WORDS ABOUT US</div>
           <div className="bigTxt">
