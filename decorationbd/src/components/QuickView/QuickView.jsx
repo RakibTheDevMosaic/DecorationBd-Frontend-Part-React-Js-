@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {RxCross1} from "react-icons/rx";
 import styles from "../../Styles/Styles"
 import {AiOutlineShoppingCart} from "react-icons/ai"
@@ -23,37 +23,23 @@ const QuickView = ({data,setOpen,open}) => {
       setCount(count + 1);
     };
   
+    // const Quickref = useRef(null)
 
-    // useEffect(() => {
-    //   const handleClickOutside = (event) => {
-    //     if (open && !event.target.classList.contains('quickViewclose')) {
+    // let handler = (e)=>{
+    //   console.log(e.target)
+    //     if(Quickref.current.contains(e.target)){
+    //       console.log(Quickref.current)
+    //       setOpen(false);
+    //     }else if(!Quickref.current.contains(e.target)){
     //       setOpen(false);
     //     }
-    //   };
-    
-    //   if (open) {
-    //     window.addEventListener('click', handleClickOutside);
+    // }
+    // useEffect(()=>{
+    //   document.addEventListener("click", handler);
+    //   return()=>{
+    //     document.removeEventListener("click",handler);
     //   }
-    
-    //   return () => {
-    //     window.removeEventListener('click', handleClickOutside);
-    //   };
-    // }, [open]);
-
-    // useEffect(() => {
-    //   const handleClick = (event) => {
-    //     if (!event.target.classList.contains('quickViewclose') && !event.target.closest('.quickViewclose')) {
-    //       setOpen(false);
-    //     }
-    //   };
-  
-    //   document.addEventListener('click', handleClick);
-  
-    //   return () => {
-    //     document.removeEventListener('click', handleClick);
-    //   };
-    // }, []);
-  
+    // })
 
   return (
     <div className='bg-[#fff]'>
@@ -63,7 +49,7 @@ const QuickView = ({data,setOpen,open}) => {
         justify-center">
             <div className="relative w-[90%] 768px:w-[60%] 
             h-[90vh] overflow-y-scroll 768px:h-[75vh] 
-            bg-white rounded-md shadow-md p-4 quickViewclose">
+            bg-white rounded-md shadow-md p-4">
                 <RxCross1 size={25} className="absolute right-3 top-3 z-50" 
                 onClick={()=>setOpen(false)}/>
 

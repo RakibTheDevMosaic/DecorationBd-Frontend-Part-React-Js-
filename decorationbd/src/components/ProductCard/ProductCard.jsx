@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { GiCheckMark } from "react-icons/gi";
 import "./ProductCard.scss";
@@ -16,6 +16,8 @@ const ProductCard = ({data,open,setOpen,count,decrementQuantity,incrementQuantit
   const incrementNumber = ()=>{setQuantity(quantity+1)}
   const d = data.name;
   const product_name = d.replace(/\s+/g,"-");
+
+
   return (
     <div className='w-full 768px:h-[500px] 1280px:h-[430px] 1350px:h-[420px] 300px:h-[510px] h-[440px] bg-black rounded-md card-container
     shadow-sm 768px:p-3 1024px:p-[5px] 1350px:p-[2px] p-[8px] relative cursor-pointer'>

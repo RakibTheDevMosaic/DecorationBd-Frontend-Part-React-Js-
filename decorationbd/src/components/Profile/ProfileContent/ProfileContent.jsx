@@ -19,6 +19,8 @@ import { RiAccountBoxLine } from "react-icons/ri";
 import { MdOutlineKey } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import {AiOutlineEye,AiOutlineEyeInvisible} from "react-icons/ai";
+// import { IoCameraSharp } from "react-icons/io5";
+import pI from "../../../Assets/img/ProfileImg/developer.png"
 
 const ProfileContent = ({ active }) => {
   const address = {
@@ -47,30 +49,29 @@ const ProfileContent = ({ active }) => {
     <div className="w-full">
       {active === 1 && (
         <>
-          <div className="w-full flex flex-col justify-center 1500px:ml-[100px] 300px:pl-[30px] 1024px:pl-[60px]
+          <div className="w-full  1500px:ml-[100px] 300px:pl-[30px] 1024px:pl-[60px]
           1500px:pl-0 ml-0">
             <div className="flex items-center gap-[15px]">
-              <CgProfile  color="#242424" className="text-[28px] 1350px:text-[26px]"/>
+              {/* <CgProfile  color="#242424" className="text-[28px] 1350px:text-[26px]"/> */}
+              <div className="w-[60px] h-[60px] rounded-full border-[2px] border-[#33cc00] overflow-hidden">
+              <img src={pI} alt="" className="w-full h-full"/>
+              </div>
               <span className="text-[#077bc4] font-[600] text-[18px] 1350px:text-[16px]">
-                Welcome!
-              </span>
-            </div>
-            <div>
-              <h2
+                Welcome!   <span
                 className="text-[#242424] capitalize 
-                   font-[600] ml-[25px] mt-[2px] text-[20px] 1350px:text-[18px]"
+                   font-[500] ml-[5px] mt-[2px] text-[20px] 1350px:text-[17px]"
               >
                 the dev mosaic
-              </h2>
+              </span>
+              </span>
             </div>
-            <br />
-            <br />
+            {/* <br /> */}
           </div>
-          <div className="w-full px-4 1500px:ml-[50px] 300px:pl-[20px] 1024px:pl-[80px] 1500px:pl-0 ml-0">
+          <div className="w-full px-4 1500px:ml-[50px] 300px:pl-[20px] 1024px:pl-[80px] 1500px:pl-0 ml-0 mt-[10px]">
             <form>
-              <div className="w-full flex flex-col pb-3  768px:gap-[10px] 300px:gap-[10px]">
+              <div className="w-full flex flex-col pb-3 1350px:pb-[6px] 768px:gap-[10px] 300px:gap-[10px]">
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">First Name :</label>
+                  <label className="block pb-2 1024px:pb-[4px] 1350px:text-[13px]">First Name :</label>
                   <input
                     type="text"
                     className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
@@ -78,7 +79,7 @@ const ProfileContent = ({ active }) => {
                   />
                 </div>
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">Last Name :</label>
+                  <label className="block pb-2 1024px:pb-[4px] 1350px:text-[13px]">Last Name :</label>
                   <input
                     type="text"
                     className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
@@ -86,7 +87,7 @@ const ProfileContent = ({ active }) => {
                   />
                 </div>
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">UserName :</label>
+                  <label className="block pb-2 1024px:pb-[4px] 1350px:text-[13px]">UserName :</label>
                   <input
                     type="text"
                     className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
@@ -96,7 +97,7 @@ const ProfileContent = ({ active }) => {
                   />
                 </div>
                 <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
-                  <label className="block pb-2 1024px:pb-[6px] 1350px:text-[13px]">Email :</label>
+                  <label className="block pb-2 1024px:pb-[4px] 1350px:text-[13px]">Email :</label>
                   <input
                     type="email"
                     className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] border-[1px] border-[rgba(0,0,0,0.3)]`}
@@ -105,11 +106,18 @@ const ProfileContent = ({ active }) => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
+                <div className="1024px:w-[50%] 768px:w-[70%] 300px:w-[100%]">
+                  <label className="block pb-2 1024px:pb-[4px] 1350px:text-[13px]">Upload profile image :</label>
+                  <input
+                    type="file"
+                    className={`${Styles.input} 1350px:p-[4px] !w-[95%] 1350px:text-[12px] outline-none border-0`}
+                  />
+                </div>
                 <button
                   type="submit"
-                  className="mt-[10px] 1024px:mt-[5px] 1350px:p-[5px]
+                  className="mt-[10px] 1024px:mt-[5px] 1350px:mt-[2px] 1350px:p-[5px]
                     768px:p-2 p-1 border bg-[#077bc4] text-white 
-                    1280px:text-[18px] 1024px:text-[16px] text-[16px] 1350px:text-[13px] font-semibold 1350px:w-[12%] 1024px:w-[15%] 768px:w-[20%] 300px:w-[50%] rounded-md"
+                    1280px:text-[18px] 1024px:text-[16px] text-[16px] 1350px:text-[13px] font-[500] 1350px:w-[12%] 1024px:w-[15%] 768px:w-[20%] 300px:w-[50%] rounded-md"
                 >
                   Save Changes
                 </button>
@@ -169,12 +177,12 @@ const ProfileContent = ({ active }) => {
                            <div className="pl-1 pt-3 1024px:pt-0 1024px:w-[70%] w-[100%]">
                     <h1
                       className="768px:text-[28px] 1350px:text-[22px] text-[25px] text-[#242424] 
-                          font-semibold capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] "
+                          font-[500] capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] "
                     >
                       billing address
                     </h1>
                     <form className="mt-[20px] 1024px:mt-[10px] 768px:ml-[30px] ml-[10px]">
-                      <div className="w-full flex flex-col pb-3 768px:gap-[10px] gap-[10px]">
+                      <div className="w-full flex flex-col pb-3 768px:gap-[10px] gap-[10px] 1350px:gap-[5px]">
                         <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
                           <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Name :</label>
                           <input
@@ -184,19 +192,8 @@ const ProfileContent = ({ active }) => {
                             required
                           />
                         </div>
-                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Email :</label>
-                          <input
-                            type="email"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
-                            border-[1px] border-[rgba(0,0,0,0.3)]`}
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                          />
-                        </div>
 
-                          <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
                         <div className="w-[49%]">
                           <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Phone :</label>
                           <input
@@ -207,14 +204,23 @@ const ProfileContent = ({ active }) => {
                           />
                         </div>
                         <div className="w-[49%]">
-                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Address :</label>
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Email :</label>
                           <input
-                            type="text"
+                            type="email"
                             className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
                             border-[1px] border-[rgba(0,0,0,0.3)]`}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                           />
                         </div>
+                        </div>
+
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Address :</label>
+                          <textarea cols="50" rows="3"
+                             className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                             border-[1px] border-[rgba(0,0,0,0.3)]`}></textarea>
                         </div>
 
                          <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
@@ -253,7 +259,7 @@ const ProfileContent = ({ active }) => {
                           type="submit"
                           className="mt-[10px] 1024px:mt-[5px]
                       p-2 border bg-[#077bc4] text-white 1350px:text-[13px]
-                      1024px:text-[16px] 768px:text-[17px] text-[16px] font-[600] 1350px:w-[15%] 1024px:w-[25%] 768px:w-[25%] w-[50%] rounded-md"
+                      1024px:text-[16px] 768px:text-[17px] text-[16px] font-[500] 1350px:w-[15%] 1024px:w-[25%] 768px:w-[25%] w-[50%] rounded-md"
                           onClick={() => {
                             setIsForm(false);
                             setBillingAddressForm(false);
@@ -274,12 +280,12 @@ const ProfileContent = ({ active }) => {
                               <div className="pl-1 pt-3 1024px:pt-0 1024px:w-[70%] w-[100%]">
                   <h1
                 className="768px:text-[28px] 1350px:text-[22px] text-[25px] text-[#242424] 
-                    font-semibold capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] ml-[8px]"
+                    font-[500] capitalize px-2 768px:ml-[30px] 1350px:ml-[20px] ml-[8px]"
               >
                 Shipping address
               </h1>
               <form className="mt-[20px] 1024px:mt-[10px] 768px:ml-[30px] ml-[10px]">
-                      <div className="w-full flex flex-col pb-3 768px:gap-[10px] gap-[10px]">
+                      <div className="w-full flex flex-col pb-3 768px:gap-[10px] gap-[10px] 1350px:gap-[5px]">
                         <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
                           <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Name :</label>
                           <input
@@ -289,19 +295,8 @@ const ProfileContent = ({ active }) => {
                             required
                           />
                         </div>
-                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
-                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]"> Email :</label>
-                          <input
-                            type="email"
-                            className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
-                            border-[1px] border-[rgba(0,0,0,0.3)]`}
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                          />
-                        </div>
 
-                          <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
                         <div className="w-[49%]">
                           <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Phone :</label>
                           <input
@@ -312,14 +307,23 @@ const ProfileContent = ({ active }) => {
                           />
                         </div>
                         <div className="w-[49%]">
-                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Address :</label>
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Email :</label>
                           <input
-                            type="text"
+                            type="email"
                             className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
                             border-[1px] border-[rgba(0,0,0,0.3)]`}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                           />
                         </div>
+                        </div>
+
+                        <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%]">
+                          <label className="block pb-2 1024px:pb-1 1350px:text-[13px]">Address :</label>
+                          <textarea cols="50" rows="3"
+                             className={`${Styles.input} 1350px:p-[4px] 1350px:text-[12px] !w-[95%]
+                             border-[1px] border-[rgba(0,0,0,0.3)]`}></textarea>
                         </div>
 
                          <div className="1024px:w-[80%] 1350px:w-[60%] 768px:w-[70%] w-[100%] flex items-center">
@@ -358,10 +362,10 @@ const ProfileContent = ({ active }) => {
                           type="submit"
                           className="mt-[10px] 1024px:mt-[5px]
                       p-2 border bg-[#077bc4] text-white 1350px:text-[13px]
-                      1024px:text-[16px] 768px:text-[17px] text-[16px] font-[600] 1350px:w-[15%] 1024px:w-[25%] 768px:w-[25%] w-[50%] rounded-md"
+                      1024px:text-[16px] 768px:text-[17px] text-[16px] font-[500] 1350px:w-[15%] 1024px:w-[25%] 768px:w-[25%] w-[50%] rounded-md"
                           onClick={() => {
                             setIsForm(false);
-                            setBillingAddressForm(false);
+                            setShippingForm(false);
                             setShippingAddress(false);
                           }}
                         >
@@ -384,13 +388,14 @@ const ProfileContent = ({ active }) => {
                     >
                       <MdOutlineMapsHomeWork
                         
-                        className="text-[#077bc4] 768px:ml-[30px] ml-[10px] 768px:text-[40px] 1350px:text-[25px] text-[30px]"
+                        className="text-[#077bc4] 768px:ml-[30px] 1350px:ml-[20px]
+                         ml-[10px] 768px:text-[40px] 1350px:text-[25px] text-[30px]"
                       />
-                      <h1 className="font-[600] 768px:text-[28px] 1350px:text-[22px] text-[20px] text-[#077bc4] capitalize">
+                      <h1 className="font-[500] 768px:text-[28px] 1350px:text-[20px] text-[20px] text-[#077bc4] capitalize">
                         billing address
                       </h1>
                       <div
-                        className="768px:ml-[15px] ml-[8px] cursor-pointer flex items-center "
+                        className="768px:ml-[15px] 1350px:ml-[50px] ml-[8px] cursor-pointer flex items-center "
                         onClick={() => {
                           setIsForm(true);
                           setBillingAddressForm(true);
@@ -403,7 +408,7 @@ const ProfileContent = ({ active }) => {
                         />{" "}
                         <span
                           className="768px:text-[18px] text-[16px] 1350px:text-[14px]
-                                 font-semibold capitalize text-[orangered]"
+                          font-[500] capitalize text-[orangered]"
                         >
                           edit
                         </span>
@@ -432,7 +437,7 @@ const ProfileContent = ({ active }) => {
                                       768px:px-[25px] px-[10px] pb-[15px] flex flex-col justify-center gap-[10px]"
                       >
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Name :{" "}
@@ -441,7 +446,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Email :{" "}
@@ -450,7 +455,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Address :{" "}
@@ -459,7 +464,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           City :{" "}
@@ -468,7 +473,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Zip Code :{" "}
@@ -477,7 +482,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Phone Number :{" "}
@@ -492,13 +497,14 @@ const ProfileContent = ({ active }) => {
               <div className="flex items-center gap-[20px] 768px:py-2 py-1">
                 <LiaShippingFastSolid
                   
-                  className="text-[#077bc4] 768px:ml-[30px] ml-[6px] 768px:text-[40px] 1350px:text-[25px] text-[30px]"
+                  className="text-[#077bc4] 768px:ml-[30px] 1350px:ml-[20px]
+                   ml-[6px] 768px:text-[40px] 1350px:text-[25px] text-[30px]"
                 />
-                <h1 className="font-[600] 768px:text-[26px] 1350px:text-[22px] text-[19px] text-[#077bc4] capitalize">
+                <h1 className="font-[500] 768px:text-[26px] 1350px:text-[20px] text-[19px] text-[#077bc4] capitalize">
                   shipping address
                 </h1>
                 <div
-                  className="768px:ml-[15px] ml-[3px] cursor-pointer flex items-center "
+                  className="768px:ml-[15px] 1350px:ml-[30px] ml-[3px] cursor-pointer flex items-center "
                   onClick={() => {
                     setIsForm(true);
                     setShippingForm(true);
@@ -512,7 +518,7 @@ const ProfileContent = ({ active }) => {
                   />{" "}
                   <span
                     className="768px:text-[18px] text-[16px] 1350px:text-[14px]
-                           font-semibold capitalize text-[orangered]"
+                    font-[500] capitalize text-[orangered]"
                   >
                     add
                   </span>
@@ -541,7 +547,7 @@ const ProfileContent = ({ active }) => {
                                       768px:px-[25px] px-[10px] pb-[15px] flex flex-col justify-center gap-[10px]"
                       >
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Name :{" "}
@@ -550,7 +556,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Email :{" "}
@@ -559,7 +565,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Address :{" "}
@@ -568,7 +574,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           City :{" "}
@@ -577,7 +583,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Zip Code :{" "}
@@ -586,7 +592,7 @@ const ProfileContent = ({ active }) => {
                           </span>
                         </h3>
                         <h3
-                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-semibold
+                          className="768px:text-[19px] 1350px:text-[14px] text-[18px] font-[500]
                                            text-[#242424]"
                         >
                           Phone Number :{" "}

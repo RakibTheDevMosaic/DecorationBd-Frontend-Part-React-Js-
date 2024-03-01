@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Styles from "../../Styles/Styles.js";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../Assets/img/Logo.png";
@@ -16,7 +16,8 @@ import { productData } from "../../Static/Data.js";
 import CartPopup from "../../components/CartPopup/CartPopup.jsx"
 import WishListPopup from "../../components/WishListPopup/WishListPopup.jsx"
 import DropDown from "../../components/DropDown/DropDown.jsx";
-import "./Header.scss"
+import "./Header.scss";
+import "../CartPopup/CartPopup.scss"
 import { RxCross1, RxCross2 } from "react-icons/rx";
 import { FaHome } from "react-icons/fa";
 import { CiShop } from "react-icons/ci";
@@ -31,7 +32,6 @@ const Header = ({dropDown,setDropDown}) => {
   const[searchTerm,setSearchTerm] = useState("");
   const [searchData,setSearchData] = useState(null);
   const [openCart,setOpencart] = useState(false);
-  const [openWishlist,setOpenWishlist] = useState(false);
   const navigate = useNavigate();
   // state for mobile
   const [openMobileSideBar,setOpenMobileSideBar] = useState(false);
@@ -54,6 +54,27 @@ const Header = ({dropDown,setDropDown}) => {
       setActive(false);
     }
   });
+
+  // const cartButton = document.getElementById('cartButton');
+  // const cartpopup = document.getElementById('cartpopup');
+  
+
+  // let cartRef = useRef();
+
+  // useEffect(() => {
+  //   const handler = (e) => {
+  //     if (!cartRef.current.contains(e.target) && e.target.id !== 'cartpopup') {
+  //       setOpencart(false);
+  //     }
+  //   };
+  
+  //   document.addEventListener('click', handler);
+  
+  //   return () => {
+  //     document.removeEventListener('click', handler);
+  //   };
+  // }, [setOpencart]);
+
   return (
     <>
       <div className="1280px:h-[80px] h-full w-full bg-[#212121]">
@@ -179,8 +200,8 @@ const Header = ({dropDown,setDropDown}) => {
             <Navbar ActiveHeading={ActiveHeading} setActiveHeading={setActiveHeading}/>
           </div>
           <div className="flex">
-            <div className={`${Styles.normal_flex}`}>
-              <div className="relative cursor-pointer mr-[15px] " onClick={()=>setOpencart(true)}>
+            <div className={`${Styles.normal_flex}`} >
+              <div className="relative cursor-pointer mr-[15px] " onClick={()=>setOpencart(true)} id="cartButton">
                 <AiOutlineShoppingCart size={25} />
                 <span
                   className="absolute right-0 top-0 rounded-full bg-[#007bc4] w-[14px]
@@ -192,6 +213,8 @@ const Header = ({dropDown,setDropDown}) => {
               <span className="text-sm font-[600]">
                 0.00<strong className="mr-2">৳</strong>
               </span>
+
+            
             </div>
           </div>
           {
@@ -201,14 +224,25 @@ const Header = ({dropDown,setDropDown}) => {
               </div>
             ):null
           }
+      
               </div>
 
               </div>)
             }
-                                   {/* Cart popup */}
-         {
+
+            {/* Cart popup */}
+
+
+            {
             openCart?(
-              <CartPopup setOpencart={setOpencart}/>
+              <div  className='fixed top-0 left-0 w-full h-screen bg-[#0000004b] z-10 ' id='cartpopup' >
+                <div className={`fixed top-0 right-0 min-h-screen  z-[999]
+       bg-white flex flex-col justify-between 1280px:w-[25%] 768px:w-[60%] 1024px:w-[45%] w-[80%]
+        shadow-md rounded-sm cartPopup`}
+       >
+                  <CartPopup setOpencart={setOpencart} openCart={openCart}/>
+                </div>
+              </div>
             ):null
           }
         </div>
